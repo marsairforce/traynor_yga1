@@ -1,0 +1,436 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x01_Male J4
+U 1 1 5C56A827
+P 2100 3600
+F 0 "J4" H 2206 3778 50  0000 C CNN
+F 1 "osc_in" H 2206 3687 50  0000 C CNN
+F 2 "" H 2100 3600 50  0001 C CNN
+F 3 "~" H 2100 3600 50  0001 C CNN
+	1    2100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C56A93D
+P 2500 3850
+F 0 "R1" H 2570 3896 50  0000 L CNN
+F 1 "56k" H 2570 3805 50  0000 L CNN
+F 2 "" V 2430 3850 50  0001 C CNN
+F 3 "~" H 2500 3850 50  0001 C CNN
+	1    2500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR01
+U 1 1 5C56AA2F
+P 2500 4200
+F 0 "#PWR01" H 2500 3950 50  0001 C CNN
+F 1 "Earth" H 2500 4050 50  0001 C CNN
+F 2 "" H 2500 4200 50  0001 C CNN
+F 3 "~" H 2500 4200 50  0001 C CNN
+	1    2500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J5
+U 1 1 5C56AA91
+P 2100 4100
+F 0 "J5" H 2206 4278 50  0000 C CNN
+F 1 "earth" H 2206 4187 50  0000 C CNN
+F 2 "" H 2100 4100 50  0001 C CNN
+F 3 "~" H 2100 4100 50  0001 C CNN
+	1    2100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4100 2500 4100
+Wire Wire Line
+	2500 4200 2500 4100
+Wire Wire Line
+	2300 3600 2500 3600
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5C56AB45
+P 2050 3200
+F 0 "J2" H 1900 3300 50  0000 R CNN
+F 1 "intensity pot (1M)" H 1950 3200 50  0000 R CNN
+F 2 "" H 2050 3200 50  0001 C CNN
+F 3 "~" H 2050 3200 50  0001 C CNN
+	1    2050 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3300 2500 3300
+Wire Wire Line
+	2500 3300 2500 3600
+Connection ~ 2500 3600
+Wire Wire Line
+	2500 3600 2500 3700
+Wire Wire Line
+	2500 4000 2500 4100
+Connection ~ 2500 4100
+$Comp
+L Device:C C1
+U 1 1 5C56AE5B
+P 2800 3350
+F 0 "C1" H 2915 3396 50  0000 L CNN
+F 1 "0.047uF 600V" H 2915 3305 50  0000 L CNN
+F 2 "" H 2838 3200 50  0001 C CNN
+F 3 "~" H 2800 3350 50  0001 C CNN
+	1    2800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5C56AF41
+P 2050 2850
+F 0 "J1" H 2023 2873 50  0000 R CNN
+F 1 "osc_out" H 2023 2782 50  0000 R CNN
+F 2 "" H 2050 2850 50  0001 C CNN
+F 3 "~" H 2050 2850 50  0001 C CNN
+	1    2050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4100 2800 4100
+Wire Wire Line
+	2800 4100 2800 3500
+$Comp
+L Device:C C2
+U 1 1 5C56B1C8
+P 3350 3100
+F 0 "C2" V 3098 3100 50  0000 C CNN
+F 1 "0.1uF 400V" V 3189 3100 50  0000 C CNN
+F 2 "" H 3388 2950 50  0001 C CNN
+F 3 "~" H 3350 3100 50  0001 C CNN
+	1    3350 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 3200 2800 2850
+Wire Wire Line
+	2800 2850 2250 2850
+Wire Wire Line
+	2250 3100 3200 3100
+$Comp
+L Device:R R2
+U 1 1 5C56B705
+P 3750 3100
+F 0 "R2" V 3543 3100 50  0000 C CNN
+F 1 "220K" V 3634 3100 50  0000 C CNN
+F 2 "" V 3680 3100 50  0001 C CNN
+F 3 "~" H 3750 3100 50  0001 C CNN
+	1    3750 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 3100 3500 3100
+$Comp
+L Device:R R3
+U 1 1 5C56B86D
+P 4000 3850
+F 0 "R3" H 4070 3896 50  0000 L CNN
+F 1 "470K" H 4070 3805 50  0000 L CNN
+F 2 "" V 3930 3850 50  0001 C CNN
+F 3 "~" H 4000 3850 50  0001 C CNN
+	1    4000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4100 4000 4100
+Wire Wire Line
+	4000 4100 4000 4000
+Connection ~ 2800 4100
+Wire Wire Line
+	3900 3100 4000 3100
+Wire Wire Line
+	4000 3100 4000 3700
+$Comp
+L yga1:12AX7A V1
+U 1 1 5C56BFB0
+P 4150 2550
+F 0 "V1" H 4383 2771 50  0000 L CNN
+F 1 "12AX7A" H 4383 2680 50  0000 L CNN
+F 2 "" H 4150 2200 50  0001 C CNN
+F 3 "" H 4150 2200 50  0001 C CNN
+	1    4150 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5C56C0C0
+P 2100 1700
+F 0 "J3" H 2050 1850 50  0000 C CNN
+F 1 "B+" H 2200 1850 50  0000 C CNN
+F 2 "" H 2100 1700 50  0001 C CNN
+F 3 "~" H 2100 1700 50  0001 C CNN
+	1    2100 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2050 4150 1700
+Wire Wire Line
+	4150 1700 2300 1700
+$Comp
+L Device:R R4
+U 1 1 5C56C35B
+P 4450 1700
+F 0 "R4" V 4243 1700 50  0000 C CNN
+F 1 "470K" V 4334 1700 50  0000 C CNN
+F 2 "" V 4380 1700 50  0001 C CNN
+F 3 "~" H 4450 1700 50  0001 C CNN
+	1    4450 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 1700 4150 1700
+Connection ~ 4150 1700
+Wire Wire Line
+	4400 2300 4800 2300
+Wire Wire Line
+	4800 2300 4800 1700
+Wire Wire Line
+	4800 1700 4600 1700
+Wire Wire Line
+	4000 3100 4000 2700
+Connection ~ 4000 3100
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5C56C9F1
+P 2100 4650
+F 0 "J6" H 2206 4828 50  0000 C CNN
+F 1 "filament" H 2206 4737 50  0000 C CNN
+F 2 "" H 2100 4650 50  0001 C CNN
+F 3 "~" H 2100 4650 50  0001 C CNN
+	1    2100 4650
+	1    0    0    -1  
+$EndComp
+Text Label 2300 4650 0    50   ~ 0
+f1
+Text Label 2300 4750 0    50   ~ 0
+f2
+Text Label 4100 2700 3    50   ~ 0
+f1
+Text Label 4200 2700 3    50   ~ 0
+f2
+$Comp
+L yga1:12AX7A V1
+U 2 1 5C56CB8A
+P 5500 3300
+F 0 "V1" H 5733 3521 50  0000 L CNN
+F 1 "12AX7A" H 5733 3430 50  0000 L CNN
+F 2 "" H 5500 2950 50  0001 C CNN
+F 3 "" H 5500 2950 50  0001 C CNN
+	2    5500 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5C56CC78
+P 4800 3200
+F 0 "R5" H 4600 3250 50  0000 L CNN
+F 1 "1M" H 4600 3150 50  0000 L CNN
+F 2 "" V 4730 3200 50  0001 C CNN
+F 3 "~" H 4800 3200 50  0001 C CNN
+	1    4800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C56CD3C
+P 4800 3850
+F 0 "C3" H 4600 4050 50  0000 L CNN
+F 1 "25uF 25V" H 4400 3950 50  0000 L CNN
+F 2 "" H 4838 3700 50  0001 C CNN
+F 3 "~" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4100 4800 4100
+Wire Wire Line
+	4800 4100 4800 4000
+Connection ~ 4000 4100
+$Comp
+L Device:R R6
+U 1 1 5C56E072
+P 5350 3850
+F 0 "R6" H 5420 3896 50  0000 L CNN
+F 1 "4.7K" H 5420 3805 50  0000 L CNN
+F 2 "" V 5280 3850 50  0001 C CNN
+F 3 "~" H 5350 3850 50  0001 C CNN
+	1    5350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4100 5350 4100
+Wire Wire Line
+	5350 4100 5350 4000
+Connection ~ 4800 4100
+Wire Wire Line
+	5350 3700 5350 3600
+Text Label 5450 3450 3    50   ~ 0
+f1
+Text Label 5550 3450 3    50   ~ 0
+f2
+Wire Wire Line
+	4800 3700 4800 3600
+Wire Wire Line
+	4800 3600 5350 3600
+Connection ~ 5350 3600
+Wire Wire Line
+	5350 3600 5350 3450
+Wire Wire Line
+	4800 3600 4800 3350
+Connection ~ 4800 3600
+Wire Wire Line
+	4800 1700 5500 1700
+Wire Wire Line
+	5500 1700 5500 2800
+Connection ~ 4800 1700
+$Comp
+L Device:C C4
+U 1 1 5C56F7AC
+P 5800 1700
+F 0 "C4" V 5548 1700 50  0000 C CNN
+F 1 "0.02uF" V 5639 1700 50  0000 C CNN
+F 2 "0.02uF" H 5838 1550 50  0001 C CNN
+F 3 "~" H 5800 1700 50  0001 C CNN
+	1    5800 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 1700 5650 1700
+Connection ~ 5500 1700
+$Comp
+L Device:R R7
+U 1 1 5C56FDB4
+P 6000 3850
+F 0 "R7" H 5800 3900 50  0000 L CNN
+F 1 "1M" H 5800 3800 50  0000 L CNN
+F 2 "" V 5930 3850 50  0001 C CNN
+F 3 "~" H 6000 3850 50  0001 C CNN
+	1    6000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4100 6000 4100
+Wire Wire Line
+	6000 4100 6000 4000
+Connection ~ 5350 4100
+Wire Wire Line
+	5750 3050 6000 3050
+Wire Wire Line
+	6000 3050 6000 3700
+$Comp
+L Device:C C6
+U 1 1 5C570C74
+P 6000 2800
+F 0 "C6" H 6115 2846 50  0000 L CNN
+F 1 "0.01uF" H 6115 2755 50  0000 L CNN
+F 2 "" H 6038 2650 50  0001 C CNN
+F 3 "~" H 6000 2800 50  0001 C CNN
+	1    6000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5C570D50
+P 6000 2150
+F 0 "C5" H 6115 2196 50  0000 L CNN
+F 1 "0.01uF" H 6115 2105 50  0000 L CNN
+F 2 "" H 6038 2000 50  0001 C CNN
+F 3 "~" H 6000 2150 50  0001 C CNN
+	1    6000 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1700 6000 1700
+Wire Wire Line
+	6000 1700 6000 2000
+Wire Wire Line
+	6000 2300 6000 2450
+Wire Wire Line
+	6000 2950 6000 3050
+Connection ~ 6000 3050
+Wire Wire Line
+	4800 3050 4800 2450
+Wire Wire Line
+	4800 2450 6000 2450
+Connection ~ 6000 2450
+Wire Wire Line
+	6000 2450 6000 2650
+$Comp
+L Device:R R8
+U 1 1 5C572782
+P 6400 3850
+F 0 "R8" H 6470 3896 50  0000 L CNN
+F 1 "100K" H 6470 3805 50  0000 L CNN
+F 2 "" V 6330 3850 50  0001 C CNN
+F 3 "~" H 6400 3850 50  0001 C CNN
+	1    6400 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4100 6400 4100
+Wire Wire Line
+	6400 4100 6400 4000
+Connection ~ 6000 4100
+$Comp
+L Connector:Conn_01x03_Male J7
+U 1 1 5C573126
+P 6600 2950
+F 0 "J7" H 6572 2973 50  0000 R CNN
+F 1 "speed pot (250K)" H 6572 2882 50  0000 R CNN
+F 2 "" H 6600 2950 50  0001 C CNN
+F 3 "~" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3050 6400 3700
+Wire Wire Line
+	6400 3050 6400 2950
+Connection ~ 6400 3050
+Wire Wire Line
+	6400 2850 6400 2450
+Wire Wire Line
+	6400 2450 6000 2450
+Wire Wire Line
+	6000 1700 6400 1700
+Wire Wire Line
+	6400 1700 6400 2450
+Connection ~ 6000 1700
+Connection ~ 6400 2450
+$Comp
+L Connector:Conn_01x01_Male J8
+U 1 1 5C575809
+P 6750 2450
+F 0 "J8" H 6722 2473 50  0000 R CNN
+F 1 "footswitch" H 6722 2382 50  0000 R CNN
+F 2 "" H 6750 2450 50  0001 C CNN
+F 3 "~" H 6750 2450 50  0001 C CNN
+	1    6750 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2450 6400 2450
+Connection ~ 2800 3200
+Wire Wire Line
+	2250 3200 2800 3200
+$EndSCHEMATC

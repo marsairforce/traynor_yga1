@@ -1,0 +1,293 @@
+EESchema Schematic File Version 4
+LIBS:inputs-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L yga1:jack_0.25in_mono_sw J1
+U 1 1 5C53E3F7
+P 2050 1250
+F 0 "J1" H 1572 1461 50  0000 R CNN
+F 1 "jack_0.25in_mono_sw" H 1572 1506 50  0001 R CNN
+F 2 "" H 2050 1250 50  0001 C CNN
+F 3 "" H 2050 1250 50  0001 C CNN
+	1    2050 1250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C53E4DB
+P 3000 1350
+F 0 "R2" V 2793 1350 50  0000 C CNN
+F 1 "68K 1/2 watt" V 2884 1350 50  0000 C CNN
+F 2 "" V 2930 1350 50  0001 C CNN
+F 3 "~" H 3000 1350 50  0001 C CNN
+	1    3000 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C53E566
+P 3000 2000
+F 0 "R3" V 3207 2000 50  0000 C CNN
+F 1 "68K 1/2 watt" V 3116 2000 50  0000 C CNN
+F 2 "" V 2930 2000 50  0001 C CNN
+F 3 "~" H 3000 2000 50  0001 C CNN
+	1    3000 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L yga1:jack_0.25in_mono_sw J2
+U 1 1 5C53E622
+P 2050 1900
+F 0 "J2" H 1572 2111 50  0000 R CNN
+F 1 "jack_0.25in_mono_sw" H 1572 2156 50  0001 R CNN
+F 2 "" H 2050 1900 50  0001 C CNN
+F 3 "" H 2050 1900 50  0001 C CNN
+	1    2050 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR01
+U 1 1 5C53E80D
+P 2150 2450
+F 0 "#PWR01" H 2150 2200 50  0001 C CNN
+F 1 "Earth" H 2150 2300 50  0001 C CNN
+F 2 "" H 2150 2450 50  0001 C CNN
+F 3 "~" H 2150 2450 50  0001 C CNN
+	1    2150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C53E842
+P 2500 1800
+F 0 "R1" V 2293 1800 50  0000 C CNN
+F 1 "1M 1/2 watt" V 2384 1800 50  0000 C CNN
+F 2 "" V 2430 1800 50  0001 C CNN
+F 3 "~" H 2500 1800 50  0001 C CNN
+	1    2500 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 1550 2150 1550
+Wire Wire Line
+	2150 1550 2150 1800
+Wire Wire Line
+	2050 2200 2150 2200
+Connection ~ 2150 2200
+Wire Wire Line
+	2150 2200 2150 2450
+Wire Wire Line
+	2050 1350 2850 1350
+Wire Wire Line
+	2050 2100 2150 2100
+Connection ~ 2150 2100
+Wire Wire Line
+	2150 2100 2150 2200
+Wire Wire Line
+	2050 1450 2250 1450
+Wire Wire Line
+	2250 1450 2250 2000
+Wire Wire Line
+	2250 2000 2050 2000
+Wire Wire Line
+	3150 1350 3300 1350
+Wire Wire Line
+	3300 1350 3300 1750
+Wire Wire Line
+	3300 2000 3150 2000
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 5C53EEEC
+P 3700 1750
+F 0 "L1" V 3522 1750 50  0000 C CNN
+F 1 "3 turns ferrite toroid" V 3613 1750 50  0000 C CNN
+F 2 "" H 3700 1750 50  0001 C CNN
+F 3 "~" H 3700 1750 50  0001 C CNN
+	1    3700 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 1750 3550 1750
+Connection ~ 3300 1750
+Wire Wire Line
+	3300 1750 3300 2000
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5C53F12F
+P 4450 1750
+F 0 "J3" H 4422 1680 50  0000 R CNN
+F 1 "to grid" H 4422 1771 50  0000 R CNN
+F 2 "" H 4450 1750 50  0001 C CNN
+F 3 "~" H 4450 1750 50  0001 C CNN
+	1    4450 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 1750 4250 1750
+Wire Wire Line
+	2350 1800 2150 1800
+Connection ~ 2150 1800
+Wire Wire Line
+	2150 1800 2150 2100
+Wire Wire Line
+	2250 2000 2700 2000
+Connection ~ 2250 2000
+Wire Wire Line
+	2650 1800 2700 1800
+Wire Wire Line
+	2700 1800 2700 2000
+Connection ~ 2700 2000
+Wire Wire Line
+	2700 2000 2850 2000
+$Comp
+L yga1:jack_0.25in_mono_sw J4
+U 1 1 5C5788EF
+P 2050 2700
+F 0 "J4" H 1572 2911 50  0000 R CNN
+F 1 "jack_0.25in_mono_sw" H 1572 2956 50  0001 R CNN
+F 2 "" H 2050 2700 50  0001 C CNN
+F 3 "" H 2050 2700 50  0001 C CNN
+	1    2050 2700
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5C5788F5
+P 3000 2800
+F 0 "R5" V 2793 2800 50  0000 C CNN
+F 1 "68K 1/2 watt" V 2884 2800 50  0000 C CNN
+F 2 "" V 2930 2800 50  0001 C CNN
+F 3 "~" H 3000 2800 50  0001 C CNN
+	1    3000 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C5788FB
+P 3000 3450
+F 0 "R6" V 3207 3450 50  0000 C CNN
+F 1 "68K 1/2 watt" V 3116 3450 50  0000 C CNN
+F 2 "" V 2930 3450 50  0001 C CNN
+F 3 "~" H 3000 3450 50  0001 C CNN
+	1    3000 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L yga1:jack_0.25in_mono_sw J5
+U 1 1 5C578901
+P 2050 3350
+F 0 "J5" H 1572 3561 50  0000 R CNN
+F 1 "jack_0.25in_mono_sw" H 1572 3606 50  0001 R CNN
+F 2 "" H 2050 3350 50  0001 C CNN
+F 3 "" H 2050 3350 50  0001 C CNN
+	1    2050 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR02
+U 1 1 5C578907
+P 2150 3900
+F 0 "#PWR02" H 2150 3650 50  0001 C CNN
+F 1 "Earth" H 2150 3750 50  0001 C CNN
+F 2 "" H 2150 3900 50  0001 C CNN
+F 3 "~" H 2150 3900 50  0001 C CNN
+	1    2150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C57890D
+P 2500 3250
+F 0 "R4" V 2293 3250 50  0000 C CNN
+F 1 "1M 1/2 watt" V 2384 3250 50  0000 C CNN
+F 2 "" V 2430 3250 50  0001 C CNN
+F 3 "~" H 2500 3250 50  0001 C CNN
+	1    2500 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 3000 2150 3000
+Wire Wire Line
+	2150 3000 2150 3250
+Wire Wire Line
+	2050 3650 2150 3650
+Connection ~ 2150 3650
+Wire Wire Line
+	2150 3650 2150 3900
+Wire Wire Line
+	2050 2800 2850 2800
+Wire Wire Line
+	2050 3550 2150 3550
+Connection ~ 2150 3550
+Wire Wire Line
+	2150 3550 2150 3650
+Wire Wire Line
+	2050 2900 2250 2900
+Wire Wire Line
+	2250 2900 2250 3450
+Wire Wire Line
+	2250 3450 2050 3450
+Wire Wire Line
+	3150 2800 3300 2800
+Wire Wire Line
+	3300 2800 3300 3200
+Wire Wire Line
+	3300 3450 3150 3450
+$Comp
+L Device:L_Core_Ferrite L2
+U 1 1 5C578922
+P 3700 3200
+F 0 "L2" V 3522 3200 50  0000 C CNN
+F 1 "3 turns ferrite toroid" V 3613 3200 50  0000 C CNN
+F 2 "" H 3700 3200 50  0001 C CNN
+F 3 "~" H 3700 3200 50  0001 C CNN
+	1    3700 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 3200 3550 3200
+Connection ~ 3300 3200
+Wire Wire Line
+	3300 3200 3300 3450
+$Comp
+L Connector:Conn_01x01_Male J6
+U 1 1 5C57892B
+P 4450 3200
+F 0 "J6" H 4422 3130 50  0000 R CNN
+F 1 "to grid" H 4422 3221 50  0000 R CNN
+F 2 "" H 4450 3200 50  0001 C CNN
+F 3 "~" H 4450 3200 50  0001 C CNN
+	1    4450 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 3200 4250 3200
+Wire Wire Line
+	2350 3250 2150 3250
+Connection ~ 2150 3250
+Wire Wire Line
+	2150 3250 2150 3550
+Wire Wire Line
+	2250 3450 2700 3450
+Connection ~ 2250 3450
+Wire Wire Line
+	2650 3250 2700 3250
+Wire Wire Line
+	2700 3250 2700 3450
+Connection ~ 2700 3450
+Wire Wire Line
+	2700 3450 2850 3450
+$EndSCHEMATC
