@@ -83,7 +83,8 @@ The preamp stage uses a single 12AX7A, one half for each input channel.
 
 This configuration is what is referred to as a [common cathode triode amplifier](http://www.aikenamps.com/index.php/designing-common-cathode-triode-amplifiers).
 
-* We can see Channel 1 has the extra 0.001uF capacitor in paralle with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
+* We can see Channel 1 has the extra 0.001uF capacitor in parallel with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
+> This is actually channel to. At this time when reading the schematic, the top channel I assumed to be channel 1, but on the chassis it is labelled as Channel II.
 
 ## Tone
 
@@ -96,6 +97,16 @@ It passes the signal through a RC network apparently called a "tone stack".
 ## Power Stage
 
 Here a 12AX7A is used as a buffer to mix the audio imput with the feedback from the output transformer.
+
+This is apparently called a push-pull amplifier.
+
+The 7027A tubes are used here because they are higher power versions of the 6L6 tubes.
+
+The 6L6 tubes are beam power tetrodes. They were created to circumvent patents in the pentode design. So beam power tetrodes have the function of penodes, but have a lower transimpedience, which works to make them more linear and have less distortion.
+
+The output from the 7027A tubes is high impedence, so these feed the windings of an audio transformer. Because of the push pull design, the transformer center tab is connected to B+.
+
+In hindsight I should have placed the beam power 4.7K resistors onto the power supply module.
 
 ![power stage](power_stage/power_stage.png)
 
@@ -115,23 +126,12 @@ This looks a bit like this schematic from [popular electronics](http://www.rfcaf
 
 ## Power Supply
 
-My first project was to replace the capacitors. But to also not worry about preserving the vintage interior of the things.
+This is a linear power supply with DC smoothing capacitors and a choke, but no regulation.
 
-The power supply schematic:
+The power supply produces about 400V DC at the output of the diode rectifier.
+
+The voltage that gets to the anode of the 12AX7A in the preamp stage is about 320V
 
 ![power supply](power_supply/power_supply_schematic.png)
 
-Here I included the input part to the tremolo circuit.
-
-The schematic shows those 2 pins per connector because I am using these male metal spade connectors, and this was a hack to have the circuit board render the net list to have me include copper connection to both pins for the connector.
-
-I designed a circuit board to hold all of the capacitors and resistors and rectifier diodes. This can be made small enough to put off to the side in the case. Here is a paper print out of the board layout.
-
-![power supply](doc/IMG_4991.jpg)
-
-I can then remove the original components. The idea was to leave the rest of the amp in this original construction.
-
-Working more in kicad to get a 3D model:
-
-![power supply model](power_supply/cad_model.png)
-
+* Why in this schematic is the power to the output audio transformer not after the standby switch. As it is in the original schematic this means the tubes would still be live when in standby with power on.

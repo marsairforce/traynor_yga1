@@ -17,6 +17,27 @@ The chassis has a power cord coming out the back of it. The end of the plug is a
 
 But why have a cord attached to it when the style these days is to use [C13/C14 connectors](https://en.wikipedia.org/wiki/IEC_60320#C13/C14_coupler) to accept an IEC cord.
 
+## Power Supply
+
+My first project was to replace the capacitors. But to also not worry about preserving the vintage interior of the things.
+
+The power supply schematic:
+
+![power supply](power_supply/power_supply_schematic.png)
+
+Here I included the input part to the tremolo circuit, because it uses the AC line from the transformer with the diode as a half  wave rectifier to create a voltage reference to be passed into the vibrato circuit. It could have gone into vibrato (module). I just wanted to have all of the high voltage things in one spot.
+The schematic shows those 2 pins per connector because I am using these male metal spade connectors, and this was a hack to have the circuit board render the net list to have me include copper connection to both pins for the connector.
+
+I designed a circuit board to hold all of the capacitors and resistors and rectifier diodes. This can be made small enough to put off to the side in the case. Here is a paper print out of the board layout.
+
+![power supply](doc/IMG_4991.jpg)
+
+I can then remove the original components. The idea was to leave the rest of the amp in this original construction.
+
+Working more in kicad to get a 3D model:
+
+![power supply model](power_supply/cad_model.png)
+
 ## Preamp grid bias fix
 
 After reviewing the [common cathode triode amplifier theory](http://www.aikenamps.com/index.php/designing-common-cathode-triode-amplifiers), I am questioning why the inputs do not have a 0.02uF capacitor to decouple the grid input, and the 1M resistor on the tube-side of the capacitor for grid bias.
