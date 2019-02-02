@@ -23,6 +23,8 @@ Turn it off. Put the younger two kids to bed. Come back. Test there is no left o
 * Desolder the C3 tone cap. Discover the wire to the channel 2 volume knob was bad solder joint. That probably will help scratchiness too.
 * Discover the C7 on the tone stack, on the back of the bass pot was broken. That is probably why the bass knob wasn't really working. Change this out for one of the new 0.02uF capacitors.
 
+![tone stack bass](doc/tone_stack_bass.jpg)
+
 It sounda a lot better. Not as scratchy. And there is a lot of bass response now.
 
 Create a small circuit board for the discrete components of the preamp circuit. The green board on the left inside the chassis.
