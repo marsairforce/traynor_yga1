@@ -81,8 +81,9 @@ The preamp stage uses a single 12AX7A, one half for each input channel.
 
 ![preamp](preamp/preamp_schematic.png)
 
-We can see Channel 1 has the extra 0.001uF capacitor in paralle with the volume potentiometer.
-This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
+This configuration is what is referred to as a [common cathode triode amplifier](http://www.aikenamps.com/index.php/designing-common-cathode-triode-amplifiers).
+
+* We can see Channel 1 has the extra 0.001uF capacitor in paralle with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
 
 ## Tone
 
@@ -133,3 +134,4 @@ I can then remove the original components. The idea was to leave the rest of the
 Working more in kicad to get a 3D model:
 
 ![power supply model](power_supply/cad_model.png)
+

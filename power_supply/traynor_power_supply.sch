@@ -316,27 +316,9 @@ Wire Wire Line
 Wire Wire Line
 	6350 4850 6350 4450
 Connection ~ 5800 4850
-$Comp
-L Device:CP C9
-U 1 1 5C4CAA84
-P 6850 4300
-F 0 "C9" H 6968 4346 50  0000 L CNN
-F 1 "10uF 450V" H 6968 4255 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 6888 4150 50  0001 C CNN
-F 3 "~" H 6850 4300 50  0001 C CNN
-	1    6850 4300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6350 3800 6850 3800
-Wire Wire Line
-	6850 3800 6850 4150
 Connection ~ 6350 3800
-Wire Wire Line
-	6350 4850 6850 4850
-Wire Wire Line
-	6850 4850 6850 4450
-Connection ~ 6350 4850
 $Comp
 L Connector:Conn_01x02_Male J11
 U 1 1 5C4CC7F7

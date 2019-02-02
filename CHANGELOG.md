@@ -1,5 +1,14 @@
 # Changes
 
+## 2019-02-01
+
+* Review schematic against actual construction in more detail. Discovery the switch was not wired correctly in my amp. Fix it.
+* Start an "actual" schematic to compare what is in my amp vs the published schematic, and the individual module schematics I made for learning.
+* Organize my thoughts for things to try to hack in a hacking.md file.
+* Build a module for the preamp circuits.
+* Fix the bass tone stack capacitor on the amp.
+* Experiment with capacitor coupled input. I didn't like the sound, undo it.
+
 ## 2019-01-31
 
 * Adjust board layout to give more spacing between mounting screws from power terminals.
