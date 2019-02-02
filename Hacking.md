@@ -66,6 +66,13 @@ I changed the inputs for channel 2 only. So switching the guitar back and forth 
 
 Rolling back to the original input for channel 2.
 
+## Tone Control
+
+The tone control in the amp is pretty basic.
+
+I found this neat looking one http://www.angelfire.com/electronic/funwithtubes/Amp-Tone-A.html#Amp-Tone_Control-3-A-back
+More discrete parts. I would need a way to make the tone control modular. To swap out the original  ones with a new one. But I don't see how to do this in this chassis. This mighe be a good project for a new amp design.
+
 ## Effects Loop
 
 There is no convenient way to connect the GSP1101 effects processor to this amp using the 4 wire method because there is no effects loop. All I can do now is have the guitar go into the GSP1101 and then the output of the GSP1101 go into the amp inputs.
