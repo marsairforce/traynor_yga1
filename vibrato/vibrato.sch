@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:vibrato-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -16,24 +17,13 @@ $EndDescr
 $Comp
 L Connector:Conn_01x01_Male J4
 U 1 1 5C56A827
-P 2100 3600
-F 0 "J4" H 2206 3778 50  0000 C CNN
-F 1 "osc_in" H 2206 3687 50  0000 C CNN
-F 2 "" H 2100 3600 50  0001 C CNN
-F 3 "~" H 2100 3600 50  0001 C CNN
-	1    2100 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 5C56A93D
-P 2500 3850
-F 0 "R1" H 2570 3896 50  0000 L CNN
-F 1 "56k" H 2570 3805 50  0000 L CNN
-F 2 "" V 2430 3850 50  0001 C CNN
-F 3 "~" H 2500 3850 50  0001 C CNN
-	1    2500 3850
-	1    0    0    -1  
+P 2200 3700
+F 0 "J4" H 2306 3878 50  0000 C CNN
+F 1 "-40V" H 2306 3787 50  0000 C CNN
+F 2 "" H 2200 3700 50  0001 C CNN
+F 3 "~" H 2200 3700 50  0001 C CNN
+	1    2200 3700
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:Earth #PWR01
@@ -61,55 +51,29 @@ Wire Wire Line
 	2300 4100 2500 4100
 Wire Wire Line
 	2500 4200 2500 4100
-Wire Wire Line
-	2300 3600 2500 3600
-$Comp
-L Connector:Conn_01x03_Male J2
-U 1 1 5C56AB45
-P 2050 3200
-F 0 "J2" H 1900 3300 50  0000 R CNN
-F 1 "intensity pot (1M)" H 1950 3200 50  0000 R CNN
-F 2 "" H 2050 3200 50  0001 C CNN
-F 3 "~" H 2050 3200 50  0001 C CNN
-	1    2050 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 3300 2500 3300
-Wire Wire Line
-	2500 3300 2500 3600
-Connection ~ 2500 3600
-Wire Wire Line
-	2500 3600 2500 3700
-Wire Wire Line
-	2500 4000 2500 4100
 Connection ~ 2500 4100
 $Comp
 L Device:C C1
 U 1 1 5C56AE5B
-P 2800 3350
-F 0 "C1" H 2915 3396 50  0000 L CNN
-F 1 "0.047uF 600V" H 2915 3305 50  0000 L CNN
-F 2 "" H 2838 3200 50  0001 C CNN
-F 3 "~" H 2800 3350 50  0001 C CNN
-	1    2800 3350
+P 1050 3750
+F 0 "C1" H 1165 3796 50  0000 L CNN
+F 1 "0.047uF 600V" H 1165 3705 50  0000 L CNN
+F 2 "" H 1088 3600 50  0001 C CNN
+F 3 "~" H 1050 3750 50  0001 C CNN
+	1    1050 3750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Male J1
 U 1 1 5C56AF41
-P 2050 2850
-F 0 "J1" H 2023 2873 50  0000 R CNN
-F 1 "osc_out" H 2023 2782 50  0000 R CNN
-F 2 "" H 2050 2850 50  0001 C CNN
-F 3 "~" H 2050 2850 50  0001 C CNN
-	1    2050 2850
+P 850 2950
+F 0 "J1" H 823 2973 50  0000 R CNN
+F 1 "osc_out" H 823 2882 50  0000 R CNN
+F 2 "" H 850 2950 50  0001 C CNN
+F 3 "~" H 850 2950 50  0001 C CNN
+	1    850  2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2500 4100 2800 4100
-Wire Wire Line
-	2800 4100 2800 3500
 $Comp
 L Device:C C2
 U 1 1 5C56B1C8
@@ -121,12 +85,6 @@ F 3 "~" H 3350 3100 50  0001 C CNN
 	1    3350 3100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2800 3200 2800 2850
-Wire Wire Line
-	2800 2850 2250 2850
-Wire Wire Line
-	2250 3100 3200 3100
 $Comp
 L Device:R R2
 U 1 1 5C56B705
@@ -152,10 +110,7 @@ F 3 "~" H 4000 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 4100 4000 4100
-Wire Wire Line
 	4000 4100 4000 4000
-Connection ~ 2800 4100
 Wire Wire Line
 	3900 3100 4000 3100
 Wire Wire Line
@@ -176,7 +131,7 @@ L Connector:Conn_01x01_Male J3
 U 1 1 5C56C0C0
 P 2100 1700
 F 0 "J3" H 2050 1850 50  0000 C CNN
-F 1 "B+" H 2200 1850 50  0000 C CNN
+F 1 "+340V" H 2200 1850 50  0000 C CNN
 F 2 "" H 2100 1700 50  0001 C CNN
 F 3 "~" H 2100 1700 50  0001 C CNN
 	1    2100 1700
@@ -189,23 +144,17 @@ Wire Wire Line
 $Comp
 L Device:R R4
 U 1 1 5C56C35B
-P 4450 1700
-F 0 "R4" V 4243 1700 50  0000 C CNN
-F 1 "470K" V 4334 1700 50  0000 C CNN
-F 2 "" V 4380 1700 50  0001 C CNN
-F 3 "~" H 4450 1700 50  0001 C CNN
-	1    4450 1700
-	0    1    1    0   
+P 4600 2000
+F 0 "R4" V 4393 2000 50  0000 C CNN
+F 1 "470K" V 4484 2000 50  0000 C CNN
+F 2 "" V 4530 2000 50  0001 C CNN
+F 3 "~" H 4600 2000 50  0001 C CNN
+	1    4600 2000
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4300 1700 4150 1700
 Connection ~ 4150 1700
 Wire Wire Line
-	4400 2300 4800 2300
-Wire Wire Line
-	4800 2300 4800 1700
-Wire Wire Line
-	4800 1700 4600 1700
+	4400 2300 4600 2300
 Wire Wire Line
 	4000 3100 4000 2700
 Connection ~ 4000 3100
@@ -224,9 +173,9 @@ Text Label 2300 4650 0    50   ~ 0
 f1
 Text Label 2300 4750 0    50   ~ 0
 f2
-Text Label 4100 2700 3    50   ~ 0
+Text Label 4250 2800 0    50   ~ 0
 f1
-Text Label 4200 2700 3    50   ~ 0
+Text Label 4250 2700 0    50   ~ 0
 f2
 $Comp
 L yga1:12AX7A V1
@@ -284,9 +233,9 @@ Wire Wire Line
 Connection ~ 4800 4100
 Wire Wire Line
 	5350 3700 5350 3600
-Text Label 5450 3450 3    50   ~ 0
+Text Label 5600 3550 0    50   ~ 0
 f1
-Text Label 5550 3450 3    50   ~ 0
+Text Label 5600 3450 0    50   ~ 0
 f2
 Wire Wire Line
 	4800 3700 4800 3600
@@ -299,10 +248,7 @@ Wire Wire Line
 	4800 3600 4800 3350
 Connection ~ 4800 3600
 Wire Wire Line
-	4800 1700 5500 1700
-Wire Wire Line
-	5500 1700 5500 2800
-Connection ~ 4800 1700
+	5500 1700 5500 2300
 $Comp
 L Device:C C4
 U 1 1 5C56F7AC
@@ -316,7 +262,6 @@ F 3 "~" H 5800 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5500 1700 5650 1700
-Connection ~ 5500 1700
 $Comp
 L Device:R R7
 U 1 1 5C56FDB4
@@ -378,59 +323,155 @@ Wire Wire Line
 $Comp
 L Device:R R8
 U 1 1 5C572782
-P 6400 3850
-F 0 "R8" H 6470 3896 50  0000 L CNN
-F 1 "100K" H 6470 3805 50  0000 L CNN
-F 2 "" V 6330 3850 50  0001 C CNN
-F 3 "~" H 6400 3850 50  0001 C CNN
-	1    6400 3850
+P 7150 2100
+F 0 "R8" H 7220 2146 50  0000 L CNN
+F 1 "100K" H 7220 2055 50  0000 L CNN
+F 2 "" V 7080 2100 50  0001 C CNN
+F 3 "~" H 7150 2100 50  0001 C CNN
+	1    7150 2100
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 1700
+$Comp
+L Device:R_POT RV?
+U 1 1 5C57AD73
+P 7400 1850
+F 0 "RV?" H 7330 1896 50  0000 R CNN
+F 1 "Speed pot (250K)" H 7330 1805 50  0000 R CNN
+F 2 "" H 7400 1850 50  0001 C CNN
+F 3 "~" H 7400 1850 50  0001 C CNN
+	1    7400 1850
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 7400 2000
+Wire Wire Line
+	7250 1850 7150 1850
+Wire Wire Line
+	7150 1850 7150 1950
+$Comp
+L power:Earth #PWR?
+U 1 1 5C580518
+P 7150 2350
+F 0 "#PWR?" H 7150 2100 50  0001 C CNN
+F 1 "Earth" H 7150 2200 50  0001 C CNN
+F 2 "" H 7150 2350 50  0001 C CNN
+F 3 "~" H 7150 2350 50  0001 C CNN
+	1    7150 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 4100 6400 4100
+	7150 2250 7150 2350
 Wire Wire Line
-	6400 4100 6400 4000
-Connection ~ 6000 4100
+	6000 2450 6550 2450
+Wire Wire Line
+	6000 1700 7400 1700
 $Comp
-L Connector:Conn_01x03_Male J7
-U 1 1 5C573126
-P 6600 2950
-F 0 "J7" H 6572 2973 50  0000 R CNN
-F 1 "speed pot (250K)" H 6572 2882 50  0000 R CNN
-F 2 "" H 6600 2950 50  0001 C CNN
-F 3 "~" H 6600 2950 50  0001 C CNN
-	1    6600 2950
+L Device:R_POT RV?
+U 1 1 5C584533
+P 1300 3500
+F 0 "RV?" H 1230 3546 50  0000 R CNN
+F 1 "Intensity pot (1M)" H 1230 3455 50  0000 R CNN
+F 2 "" H 1300 3500 50  0001 C CNN
+F 3 "~" H 1300 3500 50  0001 C CNN
+	1    1300 3500
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 3050 6400 3700
+	1050 3600 1050 3500
 Wire Wire Line
-	6400 3050 6400 2950
-Connection ~ 6400 3050
-Wire Wire Line
-	6400 2850 6400 2450
-Wire Wire Line
-	6400 2450 6000 2450
-Wire Wire Line
-	6000 1700 6400 1700
-Wire Wire Line
-	6400 1700 6400 2450
-Connection ~ 6000 1700
-Connection ~ 6400 2450
+	1050 3500 1150 3500
 $Comp
-L Connector:Conn_01x01_Male J8
-U 1 1 5C575809
-P 6750 2450
-F 0 "J8" H 6722 2473 50  0000 R CNN
-F 1 "footswitch" H 6722 2382 50  0000 R CNN
-F 2 "" H 6750 2450 50  0001 C CNN
-F 3 "~" H 6750 2450 50  0001 C CNN
-	1    6750 2450
-	-1   0    0    -1  
+L power:Earth #PWR?
+U 1 1 5C58528D
+P 1050 4200
+F 0 "#PWR?" H 1050 3950 50  0001 C CNN
+F 1 "Earth" H 1050 4050 50  0001 C CNN
+F 2 "" H 1050 4200 50  0001 C CNN
+F 3 "~" H 1050 4200 50  0001 C CNN
+	1    1050 4200
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 2450 6400 2450
-Connection ~ 2800 3200
+	1050 3900 1050 4200
 Wire Wire Line
-	2250 3200 2800 3200
+	1050 3500 1050 2950
+Connection ~ 1050 3500
+Wire Wire Line
+	2500 4100 4000 4100
+Wire Notes Line
+	850  3200 1400 3200
+Wire Notes Line
+	1400 3200 1400 3950
+Wire Notes Line
+	1400 3950 850  3950
+Wire Notes Line
+	850  3950 850  3200
+Wire Wire Line
+	2000 3700 1300 3700
+Wire Wire Line
+	1300 3700 1300 3650
+Wire Wire Line
+	1300 3100 1300 3350
+Wire Wire Line
+	1300 3100 3200 3100
+Wire Wire Line
+	4600 2300 4600 2150
+Wire Wire Line
+	4600 1850 4600 1700
+Wire Wire Line
+	4150 1700 4600 1700
+Wire Wire Line
+	5600 3450 5550 3450
+Wire Wire Line
+	5600 3550 5450 3550
+Wire Wire Line
+	5450 3550 5450 3450
+Wire Wire Line
+	4250 2700 4200 2700
+Wire Wire Line
+	4250 2800 4100 2800
+Wire Wire Line
+	4100 2800 4100 2700
+Wire Wire Line
+	4600 2300 5500 2300
+Connection ~ 4600 2300
+Connection ~ 5500 2300
+Wire Wire Line
+	5500 2300 5500 2800
+$Comp
+L yga1:jack_0.25in_mono J?
+U 1 1 5C59E1C0
+P 6900 3000
+F 0 "J?" H 6422 3165 50  0000 R CNN
+F 1 "jack_0.25in_mono" H 6422 3256 50  0000 R CNN
+F 2 "" H 6900 3000 50  0001 C CNN
+F 3 "" H 6900 3000 50  0001 C CNN
+	1    6900 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6550 2450 6550 3100
+Wire Wire Line
+	6550 3100 6900 3100
+$Comp
+L power:Earth #PWR?
+U 1 1 5C5A0095
+P 6900 3450
+F 0 "#PWR?" H 6900 3200 50  0001 C CNN
+F 1 "Earth" H 6900 3300 50  0001 C CNN
+F 2 "" H 6900 3450 50  0001 C CNN
+F 3 "~" H 6900 3450 50  0001 C CNN
+	1    6900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3300 6900 3450
+Wire Notes Line
+	6800 1550 7650 1550
+Wire Notes Line
+	7650 1550 7650 3650
+Wire Notes Line
+	7650 3650 6800 3650
+Wire Notes Line
+	6800 3650 6800 1550
 $EndSCHEMATC

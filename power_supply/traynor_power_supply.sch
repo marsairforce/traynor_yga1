@@ -207,8 +207,6 @@ Wire Wire Line
 	3350 3800 3350 3950
 Wire Wire Line
 	3000 3500 3350 3500
-Wire Wire Line
-	3350 3500 3350 3600
 Connection ~ 3350 3800
 Wire Wire Line
 	3350 3800 3950 3800
@@ -228,7 +226,7 @@ $EndComp
 Wire Wire Line
 	4400 3800 5000 3800
 Wire Wire Line
-	5000 3800 5000 4150
+	5000 3800 5000 3950
 Connection ~ 4400 3800
 Wire Wire Line
 	4400 4850 5000 4850
@@ -324,7 +322,7 @@ L Connector:Conn_01x02_Male J11
 U 1 1 5C4CC7F7
 P 7050 3800
 F 0 "J11" H 7023 3680 50  0000 R CNN
-F 1 "OUT3" H 7023 3771 50  0000 R CNN
+F 1 "+340V" H 7023 3771 50  0000 R CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7050 3800 50  0001 C CNN
 F 3 "~" H 7050 3800 50  0001 C CNN
 	1    7050 3800
@@ -336,7 +334,7 @@ L Connector:Conn_01x02_Male J10
 U 1 1 5C4CDDF0
 P 7050 3500
 F 0 "J10" H 7023 3380 50  0000 R CNN
-F 1 "OUT2" H 7023 3471 50  0000 R CNN
+F 1 "+400V" H 7023 3471 50  0000 R CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7050 3500 50  0001 C CNN
 F 3 "~" H 7050 3500 50  0001 C CNN
 	1    7050 3500
@@ -447,7 +445,7 @@ L Connector:Conn_01x02_Male J5
 U 1 1 5C4D7696
 P 4300 2400
 F 0 "J5" H 4273 2280 50  0000 R CNN
-F 1 "TREM" H 4273 2371 50  0000 R CNN
+F 1 "-40V" H 4273 2371 50  0000 R CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 4300 2400 50  0001 C CNN
 F 3 "~" H 4300 2400 50  0001 C CNN
 	1    4300 2400
@@ -457,15 +455,14 @@ Connection ~ 4100 2400
 $Comp
 L Connector:Conn_01x02_Male J4
 U 1 1 5C4D8602
-P 3550 3500
-F 0 "J4" H 3523 3473 50  0000 R CNN
-F 1 "OUT1" H 3523 3382 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 3550 3500 50  0001 C CNN
-F 3 "~" H 3550 3500 50  0001 C CNN
-	1    3550 3500
+P 5200 3950
+F 0 "J4" H 5173 3923 50  0000 R CNN
+F 1 "Audio_center_tap" H 5173 3832 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 5200 3950 50  0001 C CNN
+F 3 "~" H 5200 3950 50  0001 C CNN
+	1    5200 3950
 	-1   0    0    -1  
 $EndComp
-Connection ~ 3350 3500
 Wire Wire Line
 	1600 3600 1600 3500
 Wire Wire Line
@@ -473,9 +470,6 @@ Wire Wire Line
 Wire Wire Line
 	1600 4950 1600 4850
 Connection ~ 1600 4850
-Connection ~ 3350 3600
-Wire Wire Line
-	3350 3600 3350 3800
 Wire Wire Line
 	5000 3300 5000 3400
 Connection ~ 5000 3400
@@ -539,4 +533,12 @@ Wire Wire Line
 Connection ~ 3950 3800
 Wire Wire Line
 	3950 3800 4400 3800
+Wire Wire Line
+	5000 4050 5000 4150
+Wire Wire Line
+	3350 3500 3350 3800
+Wire Wire Line
+	5000 3950 5000 4050
+Connection ~ 5000 3950
+Connection ~ 5000 4050
 $EndSCHEMATC

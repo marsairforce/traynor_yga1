@@ -100,6 +100,23 @@ X ~ 7 400 -600 300 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# jack_0.25in_mono
+#
+DEF jack_0.25in_mono J 0 40 Y Y 1 F N
+F0 "J" 0 400 50 H V C CNN
+F1 "jack_0.25in_mono" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+A -280 90 32 1616 184 0 1 0 N -310 100 -250 100
+S -450 300 -400 100 0 1 0 N
+P 2 0 1 0 -400 300 0 300 N
+P 2 0 1 0 -250 100 0 100 N
+X ~ 1 0 100 100 L 28 28 1 1 P
+X ~ 2 0 300 100 L 28 28 1 1 P
+ENDDRAW
+ENDDEF
+#
 # jack_0.25in_mono_sw
 #
 DEF jack_0.25in_mono_sw J 0 40 Y Y 1 F N
