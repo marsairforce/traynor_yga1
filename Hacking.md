@@ -17,6 +17,8 @@ The chassis has a power cord coming out the back of it. The end of the plug is a
 
 But why have a cord attached to it when the style these days is to use [C13/C14 connectors](https://en.wikipedia.org/wiki/IEC_60320#C13/C14_coupler) to accept an IEC cord.
 
+* Update 2019-02-03: done.
+
 ## Power Supply
 
 My first project was to replace the capacitors. But to also not worry about preserving the vintage interior of the things.

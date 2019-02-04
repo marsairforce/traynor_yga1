@@ -2,6 +2,12 @@
 
 This is the documentation of the amp state.
 
+## 2919-02-03
+
+* Install the IEC power connector.
+
+![iec connector](doc/iec_connector.jpg)
+
 ## 2019-02-01
 
 I disconnected the power transformer from the diodes and hooked up a 12V AC power transformer. Wanting to test to see if there are any shorts in the capacitors. Or if there was any ripple on the DC voltage.
