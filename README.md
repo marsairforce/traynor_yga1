@@ -134,4 +134,13 @@ The voltage that gets to the anode of the 12AX7A in the preamp stage is about 32
 
 ![power supply](power_supply/power_supply_schematic.png)
 
-* Why in this schematic is the power to the output audio transformer not after the standby switch. As it is in the original schematic this means the tubes would still be live when in standby with power on.
+* Why in this schematic is the power to the output audio transformer not after the standby switch. As it is in the original schematic this means the tubes would still be live when in standby with power on. - I later fixed this in my amp.
+
+### Voltages
+
+To measure the voltages I turned on the amp and waited about a minute for them to warm up. Initially the voltages were highter but they stabilize once the tubes are loading the circut. No audio input during the measurement.
+
+* After the choke: 400V DC; 3V AC ripple (This ripple is probably because the capacitors are bad?)
+* After the 4.7K resistor, B+ into the tone stack and vibrato: 340V DC ; 0.2V AC ripple.
+* At the input preamp after the 10K resistor: 216V DC ; 0.2V AC ripple.
+* Voltage into vibrato circuit: -40V; 0.2 V AC ripple.

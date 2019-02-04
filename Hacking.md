@@ -25,8 +25,20 @@ The power supply schematic:
 
 ![power supply](power_supply/power_supply_schematic.png)
 
-Here I included the input part to the tremolo circuit, because it uses the AC line from the transformer with the diode as a half  wave rectifier to create a voltage reference to be passed into the vibrato circuit. It could have gone into vibrato (module). I just wanted to have all of the high voltage things in one spot.
+Here I included the input part to the tremolo circuit, because it uses the AC line from the transformer with the diode as a half  wave rectifier to create a voltage reference to be passed into the vibrato circuit. It could have gone into vibrato (module). I just wanted to have all of the high voltage things in one spot. Technically this is power supply stuff, as these parts work to provide a -40V source to the oscillator circuit.
+
 The schematic shows those 2 pins per connector because I am using these male metal spade connectors, and this was a hack to have the circuit board render the net list to have me include copper connection to both pins for the connector.
+
+### Voltages
+
+To measure the voltages I turned on the amp and waited about a minute for them to warm up. Initially the voltages were highter but they stabilize once the tubes are loading the circut. No audio input during the measurement.
+
+* After the choke: 400V DC; 3V AC ripple (This ripple is probably because the capacitors are bad?)
+* After the 4.7K resistor, B+ into the tone stack and vibrato: 340V DC ; 0.2V AC ripple.
+* At the input preamp after the 10K resistor: 216V DC ; 0V AC ripple - this was measured after I replaced the preamp components with modern ones. But there probably was a bit of ripple before, because there used to be a noticable hum in the output before.
+* Voltage into vibrato circuit: -40V; 0.2 V AC ripple.
+
+I would think we want no AC ripple anywhere. I will work to replace the capacitors in the power supply.
 
 I designed a circuit board to hold all of the capacitors and resistors and rectifier diodes. This can be made small enough to put off to the side in the case. Here is a paper print out of the board layout.
 
@@ -65,6 +77,37 @@ It sounds ok. There was sound and it was clean. But it had no personality or fee
 I changed the inputs for channel 2 only. So switching the guitar back and forth to channel 1. the 0.02uF ceramic capacitor I have takes a lot something out of the sound.
 
 Rolling back to the original input for channel 2.
+
+## Preamp input module
+
+Create a small circuit board for the discrete components of the preamp circuit. The green board on the left inside the chassis.
+
+![preamp module v1](preamp/preamp_module-v1.jpg
+)
+
+* grid bias capacitor (250uF) and resistor (820 ohms)
+* 10K 1W resistor from B+
+* 10uF capacitor.
+* 2x 100K resistors to the anodes.
+* 2x 0.02uF capacitors to volume pots.
+* 2x 100k resistors to audio out.
+
+Assemble the circuit board. Using the usual crude point to point soldering on the solder side of the board. Just the leads of the components to each other here.
+
+Screw it to the inside of the case using standoffs and nylon screws. Use 100 watt solder iron to attach ground wire to chassis.
+The extra black wire is in case I want to run this over to the power supply board later.
+
+Connect the grid bias capacitor and resistor. Then power up and test. It continues to sound ok. Not broken anyway.
+
+Power it off. Wire up the rest of the resistors and capacitors. Wires going to the 1st 12AX7A tube and the volume pots.
+Remove the old parts and wires from the ladder construction.
+Placing the wires neatly as close to the chassis as possible, keeping the wires as short as possible as well.
+
+I depopulated the old components from the ladder board. These are those empty rivets on the entire left end of now. I removed 12 components today.
+
+Turn the amp on, plug it into my computer and test it as a speaker for a bit. It isn't catching fire. So thre is that.
+
+Measure the voltage into the 12AX7A again. It now has 0V AC ripple. Before it was 0.2V AC ripple, which was probably why we were hearing the hum on the output. I think the ripple went away because we have the new 10uF capacitor there.
 
 ## Tone Control
 

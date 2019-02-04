@@ -12,7 +12,7 @@ I disconnected the power transformer from the diodes and hooked up a 12V AC powe
 Things looked ok so I put the main transformer back in and plugged it in and turned it on. Plugged it into my room speaker and plugged guitar into it.
 
 The amp works. Not nearly as buzzy as I would like it to be.
-Once we get the orginal amp working again, some things to look into.
+Some things to look into.
 
 * Volume is scratchy. This is possibly because input jacks are loose still.
 * I really don't like that brightness mod on chanel 2 (C3 on the original schematic).
@@ -26,6 +26,8 @@ Turn it off. Put the younger two kids to bed. Come back. Test there is no left o
 ![tone stack bass](doc/tone_stack_bass.jpg)
 
 It sounda a lot better. Not as scratchy. And there is a lot of bass response now.
+
+### Preamp input module
 
 Create a small circuit board for the discrete components of the preamp circuit. The green board on the left inside the chassis.
 
@@ -53,3 +55,5 @@ Placing the wires neatly as close to the chassis as possible, keeping the wires 
 I depopulated the old components from the ladder board. These are those empty rivets on the entire left end of now. I removed 12 components today.
 
 Turn the amp on, plug it into my computer and test it as a speaker for a bit. It isn't catching fire. So thre is that.
+
+Measure the voltage into the 12AX7A again. It now has 0V AC ripple. Before it was 0.2V AC ripple, which was probably why we were hearing the hum on the output. I think the ripple went away because we have the new 10uF capacitor there.
