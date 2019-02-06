@@ -2,6 +2,24 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-05
+
+* Second order of parts arrived from DigiKey.
+* Replace the 0.02uF ceramic capacitor on CH2 with the 0.02uF metal film capacitor. Leave CH1 as ceramic one for now. Wanting to see if I can notice any difference.
+* Discover volume knobs are not lined up. The chicken foot handle is not the same orientation on CH1 as CH2. Adjust. I was thinking CH1 had more gain because it shows volume at 0-1 where CH2 needed 1-2.
+* I do notice CH2 is still a bit scratchy when changing cables. Likely oxide or dirt on the connectors in the jack.
+* Try to clean the input jacks with Q tips and alcohol.
+* Notice the chicken foot knobs are super crusty too. Take them all off and clean around them with Q tip and alcohol.
+* The cleaning made the treble knob super hard to turn. Like the alcohol got in there I guess and made it sticky. Use a tiny bit of WD-40 on the shaft. Good to go again.
+* Replace the ceramic cap I previously put onto the bass knob with a metal film cap. Also replace the resistors now that I have the parts.
+  ![tone knobs](doc/tone_knob_components.jpg)
+* Build the tone control components onto a circuit board.
+  ![tone control module](doc/tone_module.jpg)
+* Now we are at the point of needing to remove some of the original ladder board to make room to mount this.
+  ![tone module installed](doc/tone_module_installed.jpg)
+  Also of interest here we can see the metal film capacitor for CH2 on the preamp module.
+* Test playing a bit. It continues to sound bright and warm. Have to stop to put the kids to bed.
+
 ## 2919-02-03
 
 * Install the IEC power connector.
