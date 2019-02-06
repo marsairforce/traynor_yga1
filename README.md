@@ -88,11 +88,11 @@ This configuration is what is referred to as a [common cathode triode amplifier]
 
 ## Tone
 
-The tone control circuit uses a 12AX7 as another intermediate amplifier stage. I do not know at this time how to compute the gain here.
+The tone control circuit uses a 12AX7 as another intermediate amplifier stage.
 
 ![tone stack](tone_control/tone_schematic.png)
 
-It passes the signal through a RC network apparently called a "tone stack".
+This configuration of the two triodes is called a [DC-coupled cathode follower](http://www.valvewizard.co.uk/dccf.html) It is by design built "badly", but this creates a low impedance output to drive the RC network or "tone stack" that manipulates the tone.
 
 ## Power Stage
 
