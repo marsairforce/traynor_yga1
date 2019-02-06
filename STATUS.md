@@ -10,6 +10,7 @@ This is the documentation of the amp state.
 * I do notice CH2 is still a bit scratchy when changing cables. Likely oxide or dirt on the connectors in the jack.
 * Try to clean the input jacks with Q tips and alcohol.
 * Notice the chicken foot knobs are super crusty too. Take them all off and clean around them with Q tip and alcohol.
+  ![clean front panel](doc/clean_front_panel.jpg)
 * The cleaning made the treble knob super hard to turn. Like the alcohol got in there I guess and made it sticky. Use a tiny bit of WD-40 on the shaft. Good to go again.
 * Replace the ceramic cap I previously put onto the bass knob with a metal film cap. Also replace the resistors now that I have the parts.
   ![tone knobs](doc/tone_knob_components.jpg)
@@ -19,6 +20,10 @@ This is the documentation of the amp state.
   ![tone module installed](doc/tone_module_installed.jpg)
   Also of interest here we can see the metal film capacitor for CH2 on the preamp module.
 * Test playing a bit. It continues to sound bright and warm. Have to stop to put the kids to bed.
+* Move the preamp module from the side to the bottom.
+  ![preamp on bottom](doc/preamp_mounted_bottom.jpg)
+  I was worried sliding it into the case would break the screws on the outside of the metal chassis.
+  Also it kind of looks all whacky haing circuit boards all different orientations.
 
 ## 2919-02-03
 
