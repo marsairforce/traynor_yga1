@@ -2,6 +2,15 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-06
+
+* Build the tremolo circuit onto its own module board. New components of same values. Remove the old components and ladder board to make space.
+  ![tremolo module](doc/tremolo_module.jpg)
+  It is the third from the right (or the left most) green circuit board.
+
+* Parts from TubeDepot arrived today. Had to pay stupid duty at the door. Something to remember. Have new tube sockets to put in sometime. And a new chicken foot knob.
+* Install the chicken foot knob. Remove the round knob I had used since i got it as a place holder. Now all knobs are chicken feet. It is a little bit smaller but still of the theme I guess. i knew I should have ordered all new knobs to have them look the same!
+
 ## 2019-02-05
 
 * Second order of parts arrived from DigiKey.
