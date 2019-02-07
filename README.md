@@ -1,30 +1,35 @@
 # Traynor YGA1 Guitar AMP
 
-I had this from many years ago.
+I got this in mid 1990's from my boss's nephew, Chris. It had caught fire and burned. The original wires were those 1960's cloth kind of insulation.
+
 
 ![Amp head](doc/IMG_4975.jpg)
 
-I got it from Rick Watt's nephew, Chris. It had caught fire and burned. The original wires were those 1960's cloth kind of insulation.
-
 I did not understand vacuum tube electronics in depth. Other than they were metal in glass. No moving parts or semiconductors here. Just resistors and capacitors. If I replace all the burnt wires it should just work again right?
+
+![original circuit](doc/original_circuits.jpg)
 
 I used modern wires (for 1990's) to rewire it.
 
 A tube socket was missing a pin so I made a loop of wire and jammed it into the hole. Close enough.
 
-The amp worked for a while for me. I used it mostly with that Kramer guiter I custom painted to look like Franken Strat. It just sounded good.
-
-I think this was before I had the Boss ME-10, so I used it with discrete effects pedals to get the tone. And the built in tube tremolo feature was cool sounding.
+Looking at the wiring I am a bit uneasy with the high voltage DC wires right there beside the input high impedance wires. The old point to point or ladder circuit construction is a lot different than anything I would consider to be a safe design today.
 
 Recent research shows these amps are [basically indestructable](https://reverb.com/ca/news/a-guide-to-vintage-traynor-amps).
 
-I moved away for internship and never returned home. My mom had it burried in the clutter at the house. She passed away, her friend Sandy who handled the estate shipped it to me.
+I only stopped using it when I stopped playing guitar when busy with university work. I moved away for internship and never returned home. My mom had it burried in the clutter at the house. She passed away, her friend Sandy who handled the estate shipped it to me.
 
 But this is now 20 years later. Now that I am aware of old devices with the old paper style capacitors becoming electrically "leaky" I am afraid to even plug it in, thinking there could be a short and it would just burn the power transformer. Or something else would catastrophically fail.
 
-![wiring](doc/IMG_4977.jpg)
+## My gear
 
-Looking at the wiring I am a bit uneasy with the high voltage DC wires right there beside the input high impedance wires. The old point to point or ladder circuit construction is a lot different than anything I would consider to be a safe design today.
+The amp worked well for me. I used it mostly with that Kramer guiter I custom painted to look like Franken Strat. It just sounded good.
+
+I used it with discrete effects pedals to get the tone. And the built in tube tremolo feature was cool sounding. I remember having a Boss compressor pedal, the Boss HM2 pedal. :ater on I had an ADA microtube 200 with a Boss ME-10. I later sold the ME-10 to Chris Davis. Still have the ADA MT-200. That is probably a project in itself to see if that still works.
+
+I had a yorkville bass amplifier. It went with the Ibanez 5 string bass I donated to the highschool when I graduated. But I remember using this with the bass because I had the speaker cabinet to go with the amp.
+
+Unfortunately I did not get the speaker cabinet back.
 
 ## Ethics
 
@@ -84,7 +89,7 @@ The preamp stage uses a single 12AX7A, one half for each input channel.
 This configuration is what is referred to as a [common cathode triode amplifier](http://www.aikenamps.com/index.php/designing-common-cathode-triode-amplifiers).
 
 * We can see Channel 1 has the extra 0.001uF capacitor in parallel with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
-> This is actually channel to. At this time when reading the schematic, the top channel I assumed to be channel 1, but on the chassis it is labelled as Channel II.
+> This is actually channel II. At this time when reading the schematic I assumed to be channel I, but on the chassis it is labelled as Channel II.
 
 ## Tone
 
@@ -96,17 +101,17 @@ This configuration of the two triodes is called a [DC-coupled cathode follower](
 
 ## Power Stage
 
-Here a 12AX7A is used as a buffer to mix the audio imput with the feedback from the output transformer.
+This am is a push-pull amplifier.
 
-This is apparently called a push-pull amplifier.
+Here a 12AX7A is used as a phase splitter and to mix the audio imput with the feedback from the output transformer.
 
 The 7027A tubes are used here because they are higher power versions of the 6L6 tubes.
+
+![7027A](doc/7027A.jpg)
 
 The 6L6 tubes are beam power tetrodes. They were created to circumvent patents in the pentode design. So beam power tetrodes have the function of penodes, but have a lower transimpedience, which works to make them more linear and have less distortion.
 
 The output from the 7027A tubes is high impedence, so these feed the windings of an audio transformer. Because of the push pull design, the transformer center tab is connected to B+.
-
-In hindsight I should have placed the beam power 4.7K resistors onto the power supply module.
 
 ![power stage](power_stage/power_stage.png)
 

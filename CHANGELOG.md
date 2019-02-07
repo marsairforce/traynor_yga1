@@ -1,5 +1,9 @@
 # Changes
 
+## 2019-02-06
+
+* Update readme. Add more pictures.
+
 ## 2019-02-01
 
 * Review schematic against actual construction in more detail. Discovery the switch was not wired correctly in my amp. Fix it.

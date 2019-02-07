@@ -1,9 +1,18 @@
 # Hacks and mods
 
+Some of this stuff is ideas. It is anywhere between a wishlist and a blog. See the [status](STATUS.md) file for the a blog kind of list of what was done.
 
-At this point this stuff is only theory. Before and after making each change I would like to power up the amp and listen to it in different modes to see how the change sounds.
+## Test Plan
 
-And to have some quantative test measurement. Set up a signal generator. Sweep through different input frequencies. Measure the output at different stages.
+Before and after making any change I would like to power up the amp and listen to it in different modes to see how the change sounds.
+
+I would like to have some quantative test measurement. Set up a signal generator. Sweep through different input frequencies. Measure the output at different stages.
+
+Connect an oscilloscope at different points of the circuit to see how the wavesform or phase changes would be very educational as well.
+
+> The challenge is to make sure we understand what the circuit components are doing so as to not destroy expensive test gear or get electocuted.
+
+Another challenge is lack of budget for test equipment. Efforts will be needed to design and build a signal generator.
 
 ## Differences from schematic
 
@@ -30,6 +39,8 @@ The power supply schematic:
 Here I included the input part to the tremolo circuit, because it uses the AC line from the transformer with the diode as a half  wave rectifier to create a voltage reference to be passed into the vibrato circuit. It could have gone into vibrato (module). I just wanted to have all of the high voltage things in one spot. Technically this is power supply stuff, as these parts work to provide a -40V source to the oscillator circuit.
 
 The schematic shows those 2 pins per connector because I am using these male metal spade connectors, and this was a hack to have the circuit board render the net list to have me include copper connection to both pins for the connector.
+
+In hindsight I should have placed the beam power 4.7K resistors onto the power supply module.
 
 ### Voltages
 
