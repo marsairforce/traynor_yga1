@@ -2,6 +2,12 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-07
+
+* Replace the output stage with new components and a module.
+  The only thing left now is the power supply. still waiting for the circuit board to come in from OSHPark.
+* Replace the broken 7027 8 pin tube socket with the new one I orded from tubedepot.com.
+
 ## 2019-02-06
 
 * Build the tremolo circuit onto its own module board. New components of same values. Remove the old components and ladder board to make space.
