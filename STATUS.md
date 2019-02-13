@@ -2,11 +2,26 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-13
+
+* Removed the "death capacitor". That 0.05uF capacitor between the mains hot and neutural. Left the switch in the chassis disconnected for now. Watched a bunch of Uncle Doug Youtube channel. He explained a bit that these capacitor and ground select switch are an artifact from before there were three wire ground wires. And I already have good low buzzing sound from the ground chassis.
+* Change the configuration of the hot wire to go through the fuze, then to the switch. Instead of the fuze attached to the neutural.
+ ![ac wiring harness](doc/updated_ac_input.jpg)
+  Using the spade connectors on the IEC connector. The ground wire now goes to a round eyelet connector on a bolt with lock washer, instead of soldered to the chassis. The AC input now feels a lot less whacky to me.
+* Updated the schematic for input module.
+  ![updated ac input](power_supply/updated_ac_input.png)
+  I started a schematic to have all the parts on one sheet like the original schematic.
+* Put some connectors onto the preamp module. Before it was just hard wired in.
+ ![preamp module connectors](doc/preamp_module_connectors.jpg)
+ This will allow me to experiement with different configurations of input preamps. I have some ideas to use both halves of the first 12AX7A tube in series to get overdrive sounds. But not wrecking the original configuration (allowing me to change it out for testing and put it back).
+
 ## 2019-02-07
 
 * Replace the output stage with new components and a module.
+  ![output stage module](doc/output_stage_module_v1.jpg)
   The only thing left now is the power supply. still waiting for the circuit board to come in from OSHPark.
 * Replace the broken 7027 8 pin tube socket with the new one I orded from tubedepot.com.
+  ![old tube socket](doc/old_tube_socket.jpg)
 
 ## 2019-02-06
 

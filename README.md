@@ -103,7 +103,9 @@ This configuration of the two triodes is called a [DC-coupled cathode follower](
 
 This am is a push-pull amplifier.
 
-Here a 12AX7A is used as a phase splitter and to mix the audio imput with the feedback from the output transformer.
+Here a 12AX7A is used as a [Schmitt phase inverter](http://www.r-type.org/articles/art-123g.htm)
+
+It also mixes the audio imput with the negative feedback from the output transformer.
 
 The 7027A tubes are used here because they are higher power versions of the 6L6 tubes.
 

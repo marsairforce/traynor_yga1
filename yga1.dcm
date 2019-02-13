@@ -6,4 +6,14 @@ K transformer coil magnet
 F ~
 $ENDCMP
 #
+$CMP SW_SP3T
+D Switch, three position, single pole triple throw, 3 position switch, SP3T
+K switch sp3t ON-ON-ON
+$ENDCMP
+#
+$CMP SW_SP4T
+D Switch, four position, single pole 4 throw, 4 position switch, SP4T
+K switch sp4t ON-ON-ON-ON
+$ENDCMP
+#
 #End Doc Library
