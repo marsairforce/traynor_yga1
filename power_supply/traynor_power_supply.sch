@@ -92,10 +92,10 @@ F 3 "~" H 3350 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C5
+L Device:CP C6
 U 1 1 5C4C3B0C
 P 3950 4600
-F 0 "C5" H 4068 4646 50  0000 L CNN
+F 0 "C6" H 4068 4646 50  0000 L CNN
 F 1 "47uF 450V" H 4068 4555 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 3988 4450 50  0001 C CNN
 F 3 "~" H 3950 4600 50  0001 C CNN
@@ -125,21 +125,10 @@ F 3 "~" H 1400 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J6
-U 1 1 5C4C4402
-P 4800 3300
-F 0 "J6" H 4906 3478 50  0000 C CNN
-F 1 "SW" H 4906 3387 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 4800 3300 50  0001 C CNN
-F 3 "~" H 4800 3300 50  0001 C CNN
-	1    4800 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J7
+L Connector:Conn_01x02_Male J5
 U 1 1 5C4C4408
 P 4800 3600
-F 0 "J7" H 4906 3778 50  0000 C CNN
+F 0 "J5" H 4906 3778 50  0000 C CNN
 F 1 "SW" H 4906 3687 50  0000 C CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 4800 3600 50  0001 C CNN
 F 3 "~" H 4800 3600 50  0001 C CNN
@@ -213,10 +202,10 @@ Wire Wire Line
 Wire Wire Line
 	4400 3800 4400 3950
 $Comp
-L Device:C C6
+L Device:C C7
 U 1 1 5C4C59F4
 P 5000 4300
-F 0 "C6" H 5115 4346 50  0000 L CNN
+F 0 "C7" H 5115 4346 50  0000 L CNN
 F 1 "0.047uF 600V" H 5115 4255 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D11.0mm_W5.0mm_P7.50mm" H 5038 4150 50  0001 C CNN
 F 3 "~" H 5000 4300 50  0001 C CNN
@@ -225,8 +214,6 @@ F 3 "~" H 5000 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4400 3800 5000 3800
-Wire Wire Line
-	5000 3800 5000 3950
 Connection ~ 4400 3800
 Wire Wire Line
 	4400 4850 5000 4850
@@ -237,113 +224,79 @@ Wire Wire Line
 	5000 3800 5000 3700
 Connection ~ 5000 3800
 $Comp
-L Connector:Conn_01x02_Male J8
-U 1 1 5C4C6878
-P 5400 3300
-F 0 "J8" H 5373 3273 50  0000 R CNN
-F 1 "CHOKE" H 5373 3182 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 5400 3300 50  0001 C CNN
-F 3 "~" H 5400 3300 50  0001 C CNN
-	1    5400 3300
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J9
+L Connector:Conn_01x02_Male J6
 U 1 1 5C4C687E
 P 5400 3700
-F 0 "J9" H 5506 3878 50  0000 C CNN
+F 0 "J6" H 5506 3878 50  0000 C CNN
 F 1 "CHOKE" H 5506 3787 50  0000 C CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 5400 3700 50  0001 C CNN
 F 3 "~" H 5400 3700 50  0001 C CNN
 	1    5400 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5000 3400 5200 3400
 $Comp
-L Device:CP C7
+L Device:CP C9
 U 1 1 5C4C750F
-P 5800 4300
-F 0 "C7" H 5918 4346 50  0000 L CNN
-F 1 "47uF 450V" H 5918 4255 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 5838 4150 50  0001 C CNN
-F 3 "~" H 5800 4300 50  0001 C CNN
-	1    5800 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 4850 5800 4850
-Wire Wire Line
-	5800 4850 5800 4450
-Connection ~ 5000 4850
-Wire Wire Line
-	5600 3800 5800 3800
-Wire Wire Line
-	5800 3800 5800 4150
-$Comp
-L Device:R R6
-U 1 1 5C4C8476
-P 6050 3800
-F 0 "R6" V 5843 3800 50  0000 C CNN
-F 1 "4.7K 1W" V 5934 3800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 3800 50  0001 C CNN
-F 3 "~" H 6050 3800 50  0001 C CNN
-	1    6050 3800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5900 3800 5800 3800
-Connection ~ 5800 3800
-$Comp
-L Device:CP C8
-U 1 1 5C4C9E8F
 P 6350 4300
-F 0 "C8" H 6468 4346 50  0000 L CNN
-F 1 "47uF 450V" H 6468 4255 50  0000 L CNN
+F 0 "C9" H 6400 4200 50  0000 L CNN
+F 1 "47uF 450V" H 6400 4100 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 6388 4150 50  0001 C CNN
 F 3 "~" H 6350 4300 50  0001 C CNN
 	1    6350 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 3800 6350 3800
-Wire Wire Line
-	6350 3800 6350 4150
-Wire Wire Line
-	5800 4850 6350 4850
+	5000 4850 5850 4850
 Wire Wire Line
 	6350 4850 6350 4450
-Connection ~ 5800 4850
 Wire Wire Line
-	6350 3800 6850 3800
+	6350 3800 6350 4150
+$Comp
+L Device:R R8
+U 1 1 5C4C8476
+P 6600 3800
+F 0 "R8" V 6393 3800 50  0000 C CNN
+F 1 "4.7K 1W" V 6484 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 3800 50  0001 C CNN
+F 3 "~" H 6600 3800 50  0001 C CNN
+	1    6600 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 3800 6350 3800
 Connection ~ 6350 3800
 $Comp
-L Connector:Conn_01x02_Male J11
-U 1 1 5C4CC7F7
-P 7050 3800
-F 0 "J11" H 7023 3680 50  0000 R CNN
-F 1 "+340V" H 7023 3771 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7050 3800 50  0001 C CNN
-F 3 "~" H 7050 3800 50  0001 C CNN
-	1    7050 3800
-	-1   0    0    1   
+L Device:CP C10
+U 1 1 5C4C9E8F
+P 6900 4300
+F 0 "C10" H 6950 4200 50  0000 L CNN
+F 1 "47uF 450V" H 6950 4100 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 6938 4150 50  0001 C CNN
+F 3 "~" H 6900 4300 50  0001 C CNN
+	1    6900 4300
+	1    0    0    -1  
 $EndComp
-Connection ~ 6850 3800
+Wire Wire Line
+	6750 3800 6900 3800
+Wire Wire Line
+	6900 3800 6900 4150
+Wire Wire Line
+	6350 4850 6900 4850
+Wire Wire Line
+	6900 4850 6900 4450
+Connection ~ 6350 4850
 $Comp
 L Connector:Conn_01x02_Male J10
-U 1 1 5C4CDDF0
-P 7050 3500
-F 0 "J10" H 7023 3380 50  0000 R CNN
-F 1 "+400V" H 7023 3471 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7050 3500 50  0001 C CNN
-F 3 "~" H 7050 3500 50  0001 C CNN
-	1    7050 3500
+U 1 1 5C4CC7F7
+P 7900 3800
+F 0 "J10" H 7873 3680 50  0000 R CNN
+F 1 "+340V" H 7873 3771 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 3800 50  0001 C CNN
+F 3 "~" H 7900 3800 50  0001 C CNN
+	1    7900 3800
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6850 3500 5800 3500
-Wire Wire Line
-	5800 3500 5800 3800
+Connection ~ 7700 3800
 $Comp
 L Device:R R1
 U 1 1 5C4D0A64
@@ -365,7 +318,7 @@ L Device:D D1
 U 1 1 5C4D183D
 P 2000 2550
 F 0 "D1" V 2046 2471 50  0000 R CNN
-F 1 "S1J-13-F" V 1955 2471 50  0000 R CNN
+F 1 "S1J-13-F" V 1900 2500 50  0000 R CNN
 F 2 "Diode_SMD:D_SMA" H 2000 2550 50  0001 C CNN
 F 3 "~" H 2000 2550 50  0001 C CNN
 	1    2000 2550
@@ -377,23 +330,23 @@ $Comp
 L Device:CP C1
 U 1 1 5C4D2043
 P 2600 2550
-F 0 "C1" H 2718 2596 50  0000 L CNN
-F 1 "8.2uF 250V" H 2718 2505 50  0000 L CNN
+F 0 "C1" H 2750 2250 50  0000 L CNN
+F 1 "8.2uF 250V" H 2400 2350 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 2638 2400 50  0001 C CNN
 F 3 "~" H 2600 2550 50  0001 C CNN
 	1    2600 2550
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:CP C4
 U 1 1 5C4D20CB
 P 3500 2550
-F 0 "C4" H 3618 2596 50  0000 L CNN
-F 1 "8.2uF 250V" H 3618 2505 50  0000 L CNN
+F 0 "C4" H 3500 2250 50  0000 L CNN
+F 1 "8.2uF 250V" H 3300 2350 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 3538 2400 50  0001 C CNN
 F 3 "~" H 3500 2550 50  0001 C CNN
 	1    3500 2550
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R3
@@ -418,21 +371,6 @@ F 3 "~" H 3050 2400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2000 2400 2600 2400
-Wire Wire Line
-	2900 2400 2600 2400
-Connection ~ 2600 2400
-Wire Wire Line
-	3200 2400 3500 2400
-Wire Wire Line
-	3500 2400 4100 2400
-Connection ~ 3500 2400
-Wire Wire Line
-	4100 2700 3500 2700
-Wire Wire Line
-	3500 2700 3100 2700
-Connection ~ 3500 2700
-Wire Wire Line
 	3100 4850 3100 2700
 Connection ~ 3100 4850
 Wire Wire Line
@@ -441,10 +379,10 @@ Connection ~ 3100 2700
 Wire Wire Line
 	3100 2700 2600 2700
 $Comp
-L Connector:Conn_01x02_Male J5
+L Connector:Conn_01x02_Male J4
 U 1 1 5C4D7696
 P 4300 2400
-F 0 "J5" H 4273 2280 50  0000 R CNN
+F 0 "J4" H 4273 2280 50  0000 R CNN
 F 1 "-40V" H 4273 2371 50  0000 R CNN
 F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 4300 2400 50  0001 C CNN
 F 3 "~" H 4300 2400 50  0001 C CNN
@@ -453,14 +391,14 @@ F 3 "~" H 4300 2400 50  0001 C CNN
 $EndComp
 Connection ~ 4100 2400
 $Comp
-L Connector:Conn_01x02_Male J4
+L Connector:Conn_01x02_Male J7
 U 1 1 5C4D8602
-P 5200 3950
-F 0 "J4" H 5173 3923 50  0000 R CNN
-F 1 "Audio_center_tap" H 5173 3832 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 5200 3950 50  0001 C CNN
-F 3 "~" H 5200 3950 50  0001 C CNN
-	1    5200 3950
+P 7900 2700
+F 0 "J7" H 7873 2673 50  0000 R CNN
+F 1 "Audio_center_tap" H 7873 2582 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 2700 50  0001 C CNN
+F 3 "~" H 7900 2700 50  0001 C CNN
+	1    7900 2700
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -470,23 +408,11 @@ Wire Wire Line
 Wire Wire Line
 	1600 4950 1600 4850
 Connection ~ 1600 4850
-Wire Wire Line
-	5000 3300 5000 3400
-Connection ~ 5000 3400
 Connection ~ 5000 3700
 Wire Wire Line
 	5000 3700 5000 3600
 Wire Wire Line
-	5200 3300 5200 3400
-Connection ~ 5200 3400
-Wire Wire Line
 	5600 3700 5600 3800
-Connection ~ 5600 3800
-Wire Wire Line
-	6850 3400 6850 3500
-Connection ~ 6850 3500
-Wire Wire Line
-	6850 3700 6850 3800
 Wire Wire Line
 	4100 2300 4100 2400
 Wire Wire Line
@@ -516,10 +442,10 @@ $EndComp
 Connection ~ 1600 3500
 Connection ~ 1600 3800
 $Comp
-L Device:CP C10
+L Device:CP C5
 U 1 1 5C539BD9
 P 3950 4100
-F 0 "C10" H 4068 4146 50  0000 L CNN
+F 0 "C5" H 4068 4146 50  0000 L CNN
 F 1 "47uF 450V" H 4068 4055 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 3988 3950 50  0001 C CNN
 F 3 "~" H 3950 4100 50  0001 C CNN
@@ -534,11 +460,191 @@ Connection ~ 3950 3800
 Wire Wire Line
 	3950 3800 4400 3800
 Wire Wire Line
-	5000 4050 5000 4150
-Wire Wire Line
 	3350 3500 3350 3800
 Wire Wire Line
-	5000 3950 5000 4050
-Connection ~ 5000 3950
-Connection ~ 5000 4050
+	2000 2400 2600 2400
+Connection ~ 2600 2400
+Wire Wire Line
+	2600 2400 2900 2400
+Wire Wire Line
+	3200 2400 3500 2400
+Wire Wire Line
+	3100 2700 3500 2700
+Connection ~ 3500 2700
+Wire Wire Line
+	3500 2700 4100 2700
+Connection ~ 3500 2400
+Wire Wire Line
+	3500 2400 4100 2400
+$Comp
+L Device:R R7
+U 1 1 5C79DD62
+P 6600 3500
+F 0 "R7" V 6393 3500 50  0000 C CNN
+F 1 "4.70 1W" V 6484 3500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 3500 50  0001 C CNN
+F 3 "~" H 6600 3500 50  0001 C CNN
+	1    6600 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C79EFC6
+P 6600 3150
+F 0 "R6" V 6393 3150 50  0000 C CNN
+F 1 "4.70 1W" V 6484 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 3150 50  0001 C CNN
+F 3 "~" H 6600 3150 50  0001 C CNN
+	1    6600 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 3800 5000 4150
+$Comp
+L Connector:Conn_01x02_Male J11
+U 1 1 5C7A0406
+P 7900 4100
+F 0 "J11" H 7873 3980 50  0000 R CNN
+F 1 "+340V" H 7873 4071 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 4100 50  0001 C CNN
+F 3 "~" H 7900 4100 50  0001 C CNN
+	1    7900 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J12
+U 1 1 5C7A12D7
+P 7900 4400
+F 0 "J12" H 7873 4280 50  0000 R CNN
+F 1 "+340V" H 7873 4371 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 4400 50  0001 C CNN
+F 3 "~" H 7900 4400 50  0001 C CNN
+	1    7900 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J13
+U 1 1 5C7A21B2
+P 7900 4700
+F 0 "J13" H 7873 4580 50  0000 R CNN
+F 1 "+340V" H 7873 4671 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 4700 50  0001 C CNN
+F 3 "~" H 7900 4700 50  0001 C CNN
+	1    7900 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J9
+U 1 1 5C7A3097
+P 7900 3500
+F 0 "J9" H 7873 3380 50  0000 R CNN
+F 1 "Output tube" H 7873 3471 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 3500 50  0001 C CNN
+F 3 "~" H 7900 3500 50  0001 C CNN
+	1    7900 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J8
+U 1 1 5C7A3F6A
+P 7900 3150
+F 0 "J8" H 7873 3030 50  0000 R CNN
+F 1 "Output tube" H 7873 3121 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 7900 3150 50  0001 C CNN
+F 3 "~" H 7900 3150 50  0001 C CNN
+	1    7900 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 3400 7700 3500
+Connection ~ 7700 3500
+Wire Wire Line
+	7700 3050 7700 3150
+Connection ~ 7700 3150
+Wire Wire Line
+	7700 2800 7700 2700
+Wire Wire Line
+	6350 2800 6350 3150
+Connection ~ 7700 2800
+Wire Wire Line
+	6450 3150 6350 3150
+Connection ~ 6350 3150
+Wire Wire Line
+	6350 3150 6350 3500
+Wire Wire Line
+	6450 3500 6350 3500
+Connection ~ 6350 3500
+Wire Wire Line
+	6350 3500 6350 3800
+Wire Wire Line
+	7700 4000 7700 4100
+Connection ~ 7700 4000
+Wire Wire Line
+	7700 4100 7700 4300
+Connection ~ 7700 4100
+Wire Wire Line
+	7700 4300 7700 4400
+Connection ~ 7700 4300
+Wire Wire Line
+	7700 4400 7700 4600
+Connection ~ 7700 4400
+Wire Wire Line
+	7700 4700 7700 4600
+Connection ~ 7700 4600
+Wire Wire Line
+	7700 3800 7700 4000
+Wire Wire Line
+	7700 3700 7700 3800
+Connection ~ 5000 4850
+Connection ~ 5600 3800
+Wire Wire Line
+	6350 2800 7700 2800
+Wire Wire Line
+	6750 3150 7700 3150
+Wire Wire Line
+	6750 3500 7700 3500
+Wire Wire Line
+	6900 3800 7700 3800
+Connection ~ 6900 3800
+$Comp
+L Device:CP C11
+U 1 1 5C7C5161
+P 7350 4300
+F 0 "C11" H 7400 4200 50  0000 L CNN
+F 1 "47uF 450V" H 7400 4100 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 7388 4150 50  0001 C CNN
+F 3 "~" H 7350 4300 50  0001 C CNN
+	1    7350 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3800 7350 4150
+Wire Wire Line
+	7350 4850 7350 4450
+Wire Wire Line
+	7350 4850 6900 4850
+Connection ~ 6900 4850
+$Comp
+L Device:CP C8
+U 1 1 5C7C7EB6
+P 5850 4300
+F 0 "C8" H 5900 4200 50  0000 L CNN
+F 1 "47uF 450V" H 5900 4100 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 5888 4150 50  0001 C CNN
+F 3 "~" H 5850 4300 50  0001 C CNN
+	1    5850 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4450 5850 4850
+Connection ~ 5850 4850
+Wire Wire Line
+	5850 4850 6350 4850
+Wire Wire Line
+	5850 4150 5850 3800
+Wire Wire Line
+	5600 3800 5850 3800
+Connection ~ 5850 3800
+Wire Wire Line
+	5850 3800 6350 3800
 $EndSCHEMATC

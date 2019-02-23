@@ -2,6 +2,23 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-22
+
+* The power supply boards arrived from OSHPark in the mail today. Assemble the components onto a board and install the board into the chassis. Remove the rest of the old ladder circuit.
+ ![assembled power supply](power_supply/module_assembled.jpg)
+
+There was a problem where I drew the schematic wrong. The polarity of the 8 uF capacitors was wrong. I put them in the correct way. Fixed the schematic.
+
+I realize as assembling it some of the connection points did not take into account the chassis wired things.
+
+* The second pole of the switch goes straight to the inductor and the centre tap of the output transformer.  The 400V out is also just off the return wire from the choke. So there are three spade connectors not populated here.
+* The resistors to the output tubes should have been included on this circuit board.
+* There should be more connectors for the 340V outputs. As there are four wires, one to each of the tube modules.
+
+Update the schematic with these changes for next time
+
+This is now all of the original circuit and components. We have modules for everything now.
+
 ## 2019-02-13
 
 * Removed the "death capacitor". That 0.05uF capacitor between the mains hot and neutural. Left the switch in the chassis disconnected for now. Watched a bunch of Uncle Doug Youtube channel. He explained a bit that these capacitor and ground select switch are an artifact from before there were three wire ground wires. And I already have good low buzzing sound from the ground chassis.

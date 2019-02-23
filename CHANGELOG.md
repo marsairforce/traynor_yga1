@@ -1,5 +1,11 @@
 # Changes
 
+## 2019-02-22
+
+* Install power supply board module.
+* Correct backwards capacitors in the -40V power supply schematic.
+
+
 ## 2019-02-06
 
 * Update readme. Add more pictures.
