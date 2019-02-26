@@ -91,6 +91,9 @@ This configuration is what is referred to as a [common cathode triode amplifier]
 * We can see Channel 1 has the extra 0.001uF capacitor in parallel with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
 > This is actually channel II. At this time when reading the schematic I assumed to be channel I, but on the chassis it is labelled as Channel II.
 
+Using a [cathode bypass calculator](https://www.ampbooks.com/mobile/amplifier-calculators/cathode-capacitor/calculator/), we can see for the values used here on the cathode (250uF, 820 ohm), that the gain is nearly uniform for all frequencies of input.
+![traynor preamp stage](ax84_preamp_mod/cathode_bypass_traynor_first_stage.png)
+
 ## Tone
 
 The tone control circuit uses a 12AX7 as another intermediate amplifier stage.

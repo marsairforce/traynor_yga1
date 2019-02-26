@@ -2,6 +2,47 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-26
+
+Have the idea to replace the preamp circuit with one based on the [AX84 High Occtane](http://www.ax84.com/hioctane.html) amp.
+
+![preamp mod schematic](ax84_preamp_mod/schematic.png)
+
+Here I am just replacing the preamp part, up to the cathode follower before the tone stack.
+
+It will
+
+* Replace the preamp module board.
+* Remove the channel II input.
+* Add a 1 uF capacitor to the cathode of the tone stack cathode follower.
+* The 0.68uF capacitor on the first stage of the preamp
+* The 1 uF capacitor onthe second stage.
+
+We will lose the two separate input channels. But I don't need thse anyway. The second channel becomes the second stage in this new single channel. The existing volume knob on the front of the chassis is thus used. We will have holes where the channel II inputs used to be.
+
+The attempt to use a connector on the preamp module before to connect to the tube does not work.
+
+* This did not consider the separate wire for each cathode. Before both cathodes shared a single resistor and bypass capacitor. But these now are differnt.
+* It did not consider the second grid input, which used to be directly wired to the input jack.
+
+No matter. Removing and replacing the module is still the order of changing 6 wires. If we ever decide this mod is not useful and wanted to go back to the original configuration we can just rewire up the old preamp module.
+
+I need to 16 resistors and capacitors. Of course I do not have all of these. Place a DigiKey order.
+
+I think this will have a higher amplification for higher frequencies, providing a treble boost type of effect.
+Based on the [cathode bypass calculator](https://www.ampbooks.com/mobile/amplifier-calculators/cathode-capacitor/calculator/)
+![first stage amplification vs frequency](ax84_preamp_mod/cathode_bypass_calculator_first_stage.png)
+
+The second stage has a similar curve, with the (1uF,1.2K) cathode bypass, but with a 83Hz gain of 36 instead of 27.
+
+I believe this is why it sounded bad before when I experimented connecting the first stage of the two channels together in series. The configuration of the Traynor preamp is pretty flat amplification over all frequencies.
+
+![traynor preamp stage](ax84_preamp_mod/cathode_bypass_traynor_first_stage.png)
+
+So boosting the low frequencies as much as the highs makes everything sound just buzzy and muddy.  Some [youtubing](https://www.youtube.com/watch?v=wkhmDEKeaBU) I have done lately seems agree that a trebble boost is preferred for good overdrive sounds.
+
+Unwire the old preamp module and install new wires to the tube socket to be ready to assemble the parts when they come in.
+
 ## 2019-02-22
 
 * The power supply boards arrived from OSHPark in the mail today. Assemble the components onto a board and install the board into the chassis. Remove the rest of the old ladder circuit.
