@@ -2,6 +2,19 @@
 
 This is the documentation of the amp state.
 
+## 2019-02-27
+
+DigiKey parts came. Happiness!
+
+Assemble the preamp module
+![ax84 preamp module](ax84_preamp_mod/module.jpg)
+
+Get it wired in nicely. Try it out a little bit (but it was after kids in bed so not very loud or long).
+I just plugged the guitar directly into it.
+It is a lot tinnier sounding, less whole bass sounding it was before. But I have a lot of variation with the tone controls on the amp and on the guitar.
+
+I was able to get some crunchy overdrive sounds. I noticed the volume pot is a little scratchy. And there is a weird spot where it seems to be some kind of resonant spot. You hear it sort of cut out and very high pitch hiss.  I have theory this is because the pots are 4M and not the 500K the schematic called for. I just used the ones that were on the chassis, but maybe I should have replaced them. Something to add to the next digikey order. In the mean time I will try to play with this a bit and see if I can find some good settings from it.
+
 ## 2019-02-26
 
 Have the idea to replace the preamp circuit with one based on the [AX84 High Occtane](http://www.ax84.com/hioctane.html) amp.
