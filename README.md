@@ -1,5 +1,13 @@
 # Traynor YGA1 Guitar AMP
 
+![Working again](doc/working.jpg)
+
+This is a project where I restored this old Traynor Signature guitar amplifier.
+
+It was an adventure in learning how vacuum tube circuits work, some history of Canadian music and equipment, humility, nostalgia, and appreciation of finer things.
+
+## Background
+
 I got this in mid 1990's from my boss's nephew, Chris. It had caught fire and burned. The original wires were those 1960's cloth kind of insulation.
 
 
@@ -89,6 +97,7 @@ The preamp stage uses a single 12AX7A, one half for each input channel.
 This configuration is what is referred to as a [common cathode triode amplifier](http://www.aikenamps.com/index.php/designing-common-cathode-triode-amplifiers).
 
 * We can see Channel 1 has the extra 0.001uF capacitor in parallel with the volume potentiometer. This will have the effect of a high-pass filter, or at least it will cut out a lot of the lower frequecies.
+
 > This is actually channel II. At this time when reading the schematic I assumed to be channel I, but on the chassis it is labelled as Channel II.
 
 Using a [cathode bypass calculator](https://www.ampbooks.com/mobile/amplifier-calculators/cathode-capacitor/calculator/), we can see for the values used here on the cathode (250uF, 820 ohm), that the gain is nearly uniform for all frequencies of input.
