@@ -1,5 +1,12 @@
 # Changes
 
+## 2019-02-28
+
+* Build and install AX84 preamp mod.
+* Install new 7027 tubes
+* Put it back together
+* Update before and after pictures.
+
 ## 2019-02-22
 
 * Install power supply board module.

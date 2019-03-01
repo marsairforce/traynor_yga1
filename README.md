@@ -4,6 +4,8 @@
 
 This is a project where I restored this old Traynor Signature guitar amplifier.
 
+![before and after](doc/before_after.jpg)
+
 It was an adventure in learning how vacuum tube circuits work, some history of Canadian music and equipment, humility, nostalgia, and appreciation of finer things.
 
 ## Background
