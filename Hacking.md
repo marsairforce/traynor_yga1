@@ -139,3 +139,7 @@ There is no convenient way to connect the GSP1101 effects processor to this amp 
 
 More thought is needed if we need  this.
 I think, yes. because if we want to have the preamp overdrive things to have tube distortion, but have reverb added after the preamp from an effects loop.
+
+# A JCM800 style preamp
+
+See [discussion](https://robrobinette.com/Tube_Guitar_Amp_Overdrive.htm), where having a biased triode to create a "cold clipper" causes more asymetric distortion. The grid resistor of 10k without a bypass cap.  Though this would require another valve than I have. It is not a simple rewire the preamp like I did with the AX84 mod. This is perhaps better suited for its own project, like a stand alone stomp box that can be used with other things too.
