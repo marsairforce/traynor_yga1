@@ -2,6 +2,65 @@
 
 This is the documentation of the amp state.
 
+## 2019-11-23
+
+I am still getting a bit of hum in the background. And turning up the tone knob increases the hum. This kind of hints to me the problem is before the phase splitter right.
+
+A [post](https://www.reddit.com/r/DIYGuitarAmps/comments/e0a04w/trying_to_match_a_pair_of_7027_power_tubes_adding/) I put on Reddit, comments say to try to put in a virtual ground in the heater supply with some resistors.
+
+Reading up on [heater wiring](http://www.valvewizard.co.uk/heater.html) from the Valve Wizard site. This seems to be a good thing to do.
+
+* I was happy to attempt to create a virtual ground with 2x 220 ohm resistors across the fillament supply to ground.
+* But the fillament supply is center tapped off the transformer, and grounded. We can see this on the schematic too.
+
+I had the idea. Maybe the fillament wiring I did in the 1990s is not as brilliant as it could be. I did not rewire the fillaments this round when I restored the amp because they still worked. But there are some places where they are not as tightly twisted as they could be. Replacing these with stranded wire I now have. (It was that solid wire before)
+
+I wired it up with better twisted wires and more twists closer to the tube sockets.
+
+I placed separate wires for the power tubes and the 12ax7 tubes, in case the hum was still there, because my next test would be to try a DC fillament power supply.
+
+![Fillament wires](doc/IMG_7432.JPG)
+
+The black wires are the original wiring I did in the 1990's. The green ones are the ones I put in today. Much better twist using stranded wire instead of solid wire. And the twists go all the way up to the tube.  I guess I did not know any better before when I first fixed this. Oddly I made the mistake of not rewiring the filaments when I rebuilt it this time around, as I thought they were still ok and good. But no!  Lesson learned here is fillament wires need to be very well twisted and very short parts that are not twisted by the tube socket.
+
+
+I also noticed I had two Ruby tubes in there, for the tone stack. I have a feeling the Ruby tubes are basically rebranded China tubes. or are at least not as good as JJ tubes.
+
+The tubes now
+
+* preamp: Sovtek 12AX7
+* tone stack: JJ ECC83
+* tremolo: JJ ECC83
+* Phase splitter: JJ ECC803 (longer plates, slightly lower gain.)
+
+The amp now has very little hum. I would say less than my Hughes and Kettner Grandmeister 40 amp. There is a very slight buzz or hiss when the treble is cranked up and high volume. but this is probably regular. It is not distruptive of the sound or play quality anyway.
+
+Very happy with the sound and feel of it now.
+
+Take off
+## 2019-11-22
+
+I was thinking based on my experience from fixing my YBA-300 bass tube amp recently, how they use OP-AMPs for the phase splitter, how having a wonky or not working as well as it should OP-AMP can really influence the performance of the phase splitter, and thus producing awful amounts of hum.
+
+That if the hum I am getting sometimes comes and goes, and the changing the phase splitter tube out as I did before can make a difference, maybe the tube phase splitter here is not working perfectly.
+
+![Phase Splitter Resistor Trimmers](doc/IMG_7422.jpg)
+
+I had the idea to put in trimmer potentiometers in series with the positive supply resistors, so I could adjust the resistance to be more what it was supposed to be.  I found the 82K resistor was actually 79K and the 100K resistor was actually 98K or thereabouts.
+
+![Power Stage Screen Resistor Trimmers](doc/IMG_7427.JPG)
+
+I also put in some 2W 100 ohm potentiometers in series with the 470 ohm resistors to the screens on the 7027 tubes, So these could be fine tuned as well. In the process I discovered one of the 470 ohm resistors was actually about 650 ohms. This is way off where it should be. Thes two resistors are the last of the original resistors, since at the time I forgot to order them when I rebuilt the amp. I guess I thought, "it is probably fine" and kept using them, but I never actually measured them. They have always been off too though, for the life of the amp. So not entirely sure how important the current or bias to the screens on the power tubes is for reducing hum here.  But it is fun to explore this. I now will be ordering new 470 ohm resistors.
+
+I think the idle hum is a little better, but is still there when turning up the treble on the tone stack.
+
+## 2019-10-25
+
+Playing using the amp. Notice there was some random "run away" buzzing sounds. The buzz would be noticably effected when tremolo was on. So it was probably not in the power stage, but something before the power stage.
+
+I had been using "China" tubes for all the 12AX7 positions. Maybe this was effecting the stability of the the amp?
+Replacing the phase splitter with a good JJ tube and the random buzzing went away a bit.
+
 ## 2019-02-28
 
 I changed out the preamp tube with one I had in my electronic junk bin. This one has slightly shorter plates. For what ever magic ass reason this other tube does not have the high frequency oscillations. I notice a bit more hiss and background noise like hum and crackles when the first gain is higher. I think perhaps trying different preamp tubes. I have some coming in from aliexpress. So wait and see. Maybe some good expensive ass one from tubedepot if that doesn't help. I hate the shipping though.

@@ -12,7 +12,6 @@ It was an adventure in learning how vacuum tube circuits work, some history of C
 
 I got this in mid 1990's from my boss's nephew, Chris. It had caught fire and burned. The original wires were those 1960's cloth kind of insulation.
 
-
 ![Amp head](doc/IMG_4975.jpg)
 
 I did not understand vacuum tube electronics in depth. Other than they were metal in glass. No moving parts or semiconductors here. Just resistors and capacitors. If I replace all the burnt wires it should just work again right?
@@ -135,9 +134,9 @@ The output from the 7027A tubes is high impedence, so these feed the windings of
 * The input from the tremolo oscillator circuit is mixed in.
 * Why is R8 100K when R7 is 82K?  The small difference here of 18K?
 
-## Vibrato
+## Tremolo
 
-The vibrator uses a low frequency oscillator to modulate the audio in the power stage.
+The tremolo uses a low frequency oscillator to modulate the audio volume in the power stage.
 
 ![vibrato](vibrato/vibrato_schematic.png)
 
