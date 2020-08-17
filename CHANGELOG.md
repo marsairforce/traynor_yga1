@@ -2,6 +2,42 @@
 
 This is the documentation of the amp state.
 
+## TODO
+
+* Update actual schematic to use part numbers of original schematic where possible.
+* Add 1M grid stopper resister to V1B input
+* Draw schematic for reverb driver
+* Order more tube sockets for reverb tubes
+* Test power transformer to see if it can power fillaments of 3 tubes (12at7, 12ax7, el84) for reverb driver circuit.
+  * Wiring these 3 tubes up to my power supply, they draw 1.5A at 6.3V
+  * It looks like the modern part number for the 78633 power transformer is the Hammond 291JX. This seems to be rated at 2.5A for the fillament supply.
+  * There are currently 4x 12AX7 tubes. Each one of these seems to draw 0.17A each. A 7027 tube draws 0.93A each.
+    So, (0.97*2) + (0.17*4) = 2.62A. That is already more than what this (modern) part is rated to supply.
+    I would need this transformer to supply 4.5A fillaments. I think the new replacement part is not the correct one for this.
+    Experimentally test jumpering the 3 tube fillaments to the power transformer. It seems able to turn them all on and able to make sound, not browning out. Not buzzing badly.
+* Order discrete components I do not have for reverb circuit
+
+## 2020-08-15
+
+Take apart the amp. Create a full updated schematic.
+
+* fix the output transformer mounting. The bracket was bent since I got it so the transformer was kind of angled in how it was sitting. Loosten the bolt and bend the bracket. It sits flat now.
+* Remove the old capacitors that were on the chassis. Wanting to make some space for the parts for the reverb circuit I am planning to add.
+* Remove the switch to bypass the tone stack. It doesn't really work well or do much for me.
+* Put in a separate cathode resistor and cap for the first crunch stage. I went with 2.7k and 1uF.
+* That tube socket I replaced before is cheap Chinese crap. The bracket does not hold the socket very well. Find the nextgen.ca site has tube sockets. Get a bunch of these. I will need some 9 pin ones to mount the EL84 to drive the transformer to the reverb tank. I will replace the 7027 8 pin socket too when these come in. Feeling frustrated I didn't look at nextgen.ca before, that I found amplified parts.com in the US, where the cost after currency exchange, shipping, and duty, will be more than what it would have been to buy from canadian store. Also, the month or more it took to arrive. So pissed off and not going to buy stuff from US vendors any more.
+* Update symbols on schematic to be more recent tube symbols.
+
+## 2020-04-??
+
+* Convert two input channels to a single input channel
+* Use the second pair of inputs as an effects loop
+* Add a toggle switch to allow us to cascade input stages in series if we want to
+* Add toggle switch to allow to bypass tone stack
+* Move the AC switch to the corner out of the way.
+
+I know I took pictures. I can't find them now.
+
 ## 2019-03-11
 
 Take apart the amp.
