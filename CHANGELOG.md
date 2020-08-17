@@ -2,21 +2,6 @@
 
 This is the documentation of the amp state.
 
-## TODO
-
-* Update actual schematic to use part numbers of original schematic where possible.
-* Add 1M grid stopper resister to V1B input
-* Draw schematic for reverb driver
-* Order more tube sockets for reverb tubes
-* Test power transformer to see if it can power fillaments of 3 tubes (12at7, 12ax7, el84) for reverb driver circuit.
-  * Wiring these 3 tubes up to my power supply, they draw 1.5A at 6.3V
-  * It looks like the modern part number for the 78633 power transformer is the Hammond 291JX. This seems to be rated at 2.5A for the fillament supply.
-  * There are currently 4x 12AX7 tubes. Each one of these seems to draw 0.17A each. A 7027 tube draws 0.93A each.
-    So, (0.97*2) + (0.17*4) = 2.62A. That is already more than what this (modern) part is rated to supply.
-    I would need this transformer to supply 4.5A fillaments. I think the new replacement part is not the correct one for this.
-    Experimentally test jumpering the 3 tube fillaments to the power transformer. It seems able to turn them all on and able to make sound, not browning out. Not buzzing badly.
-* Order discrete components I do not have for reverb circuit
-
 ## 2020-08-15
 
 Take apart the amp. Create a full updated schematic.
@@ -27,6 +12,21 @@ Take apart the amp. Create a full updated schematic.
 * Put in a separate cathode resistor and cap for the first crunch stage. I went with 2.7k and 1uF.
 * That tube socket I replaced before is cheap Chinese crap. The bracket does not hold the socket very well. Find the nextgen.ca site has tube sockets. Get a bunch of these. I will need some 9 pin ones to mount the EL84 to drive the transformer to the reverb tank. I will replace the 7027 8 pin socket too when these come in. Feeling frustrated I didn't look at nextgen.ca before, that I found amplified parts.com in the US, where the cost after currency exchange, shipping, and duty, will be more than what it would have been to buy from canadian store. Also, the month or more it took to arrive. So pissed off and not going to buy stuff from US vendors any more.
 * Update symbols on schematic to be more recent tube symbols.
+* Update actual schematic to use part numbers of original schematic where possible.
+* Draw schematic for reverb driver
+
+* Test power transformer to see if it can power fillaments of 3 tubes (12at7, 12ax7, el84) for reverb driver circuit.
+  * Wiring these 3 tubes up to my power supply, they draw 1.5A at 6.3V
+  * It looks like the modern part number for the 78633 power transformer is the Hammond 291JX. This seems to be rated at 2.5A for the fillament supply.
+  * There are currently 4x 12AX7 tubes. Each one of these seems to draw 0.17A each. A 7027 tube draws 0.93A each.
+    So, (0.97*2) + (0.17*4) = 2.62A. That is already more than what this (modern) part is rated to supply.
+    I would need this transformer to supply 4.5A fillaments. I think the new replacement part is not the correct one for this.
+    Experimentally test jumpering the 3 tube fillaments to the power transformer. It seems able to turn them all on and able to make sound, not browning out. Not buzzing badly. Looking on digikey. Most similar transformers are rated at 3.5A
+    I can't find a spec for this transformer. It is probably over sized for this application.
+    I figure I can try to use it, and if I burn it out, it looks like [this](https://www.digikey.ca/en/products/detail/hammond-manufacturing/270FX/455411?s=N4IgTCBcDa4OwAYBiANEBdAvkA) is a repacement that is rated at 5A fillament.
+* Add 1M grid stopper resistors to the inputs of V1A and V1B. Before these were on the input jack side of the 68K resistors. I feel these should be right up as close to the tube as possible. Also, because we now can switch which preamp stage the input is connected to, we now require a separate grid stopper resistor per tube.
+* Change out the two 100 ohm screen current adjustment resistors. Notice on the schematic how the V+ kind of Tees into the middle of the two resistors. In practise I seem to have one of these all the way zero'd out and the other one about a third to mid way. So if I just have the wiper connected to V+ and one leg of the pot to each fixed resistor, Then I can achieve the same effect but with one knob. The pot is rated at 2 watts. I only use about 1 watt here, per tube, so this should be ok. If it breaks we can always put it back how it was before without the adjustment pot. I am not entirely convinced this makes an audible difference. Just having the same screen currents into the tubes allows the tubes to wear about the same, not having a slightly hotter tube.
+* Compute a list of parts I need to build the reverb tank driver circuit, send off a DigiKey order.
 
 ## 2020-04-??
 
