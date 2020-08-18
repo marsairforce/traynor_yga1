@@ -2,6 +2,22 @@
 
 This is the documentation of the amp state.
 
+## 2020-08-17
+
+* Install tube sockets for the 12AX7 and 12AT7 tubes for the reverb circuit onto the chasis. Wire up the fillaments.
+* The tremolo was "too fast". The slowest setting was about all I could use, but still too fast. Change C18 and C19 from 0.01uF to 0.02uF. It is a much usable range of speeds now.
+* Change C8 (input to phase splitter from tone stack) from 0.02uF to 0.047uF. I think its a bit more "bassier" now.
+
+Trying to reduce the oscillations I am getting when turning the gain knobs all the way up.
+
+* Add 1K grid stop in series to input of 2nd stage preamp.
+* Install a 360K in series with 1st and 2nd channel gain knobs. This seems to be the min resistance on the pot to prevent squealing when the pots are turned up more of the way. This didn't help.
+* Try to install 0.001uF capacitors in parallel with the plate resistors on the preamp stages and cathode follow 100k B+ resistors.
+* Swap the wires from the tubes to the output transformer (changing phase might change feedback properties?) That made it horribly worse. Put them back. And fix that scrap of solid conductor wire that was hacked onto the wire to be a tube socket lead.
+
+I still get high pitch squeal when the gain knobs are turned most of the way up. Some kind of stray capacitance with my sloppy wires probably. But I think it is a bit better. It does not have that cut power and do a sort of hum effect, which was likely from very high frequency inaudible oscillations.
+Ill leave this for now. Practically I won't crank out the gain knobs anyway right.
+
 ## 2020-08-15
 
 Take apart the amp. Create a full updated schematic.
