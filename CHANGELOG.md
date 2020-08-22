@@ -2,6 +2,10 @@
 
 This is the documentation of the amp state.
 
+## 2020-08-22
+
+* Swap out the 12AX7 in V2 (tone stack buffers) for a 12AT7. I can't tell entirely if it is helping remove some of that squeal oscillations. But it doesn't not work and seems to sound ok. So going to try leaving it in there for a bit. I did have a JJ ECC83 tube in there before.
+
 ## 2020-08-20
 
 Assemble the discrete RC components on the circuit board and where it makes sense on the chassis.
