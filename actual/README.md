@@ -23,7 +23,15 @@ Notable changes:
 
 This is an entirely new component. The amp originally did not have reverb effect.
 
-> At this time, this is still under development.
+I ordered a mod reverb tank from NextGenGuitars. They are right here in Ottawa, great service for having stuff shipped. It's almost as fast as DigiKey.
+
+This circuit is based on a reverb circuit schematic I found on the internet. I think from "Tube Town Reverb Kit".  They specify to use an EL844. I don't have one of those, but I do have an EL84. Its hotter and more waste probably. But it works and I have it.
+
+The power transformer in this amp seems to be way over sized and does not even blink when I add 3 more tubes. Which is convenient.
+
+I took some time to wire up the discrete components on its own circuit board module, like the other parts of the amplifier. It is now a hairy wires mess inside. But it works. After some preliminary testing and tracing all the component connections before powering it on, it worked for me right out the door.
+
+I really appreciate having reverb effect built into the amp now. It is so much better to me than a reverb effect pedal anyway.
 
 ## Output
 

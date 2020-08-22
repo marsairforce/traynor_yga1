@@ -2,11 +2,56 @@
 
 This is the documentation of the amp state.
 
+## 2020-08-20
+
+Assemble the discrete RC components on the circuit board and where it makes sense on the chassis.
+Using screw terminal connectors to interface between the board and the chassis. Update the schematic with these connectors.
+
+Use a multimeter to probe the circuit and verify things are connected to where they are supposed to be.
+
+Wanting to test the components rather than hooking it all up at once. Added 34 test points to the schematic. Can work on measuring and documenting voltages and observing and learning wave forms. Some are high voltage so need to be super careful.
+
+* Test 1: Populate just the V8 tube of reverb unit. Hook up the audio from the FX return through V8A, through RV7 to power stage. Populate just V8 12AX7 tube. Expecting the amp continues to work and produce sound.
+  * Ok. I do hear amp audio. When I turn up the level for reverb I do hear high frequency oscillating though. Pretty sure I should not. Notice when things warm up the squealing goes away.
+
+* Test 2: Still with only the V8 tube populated, hook up a signal to the reverb tank return connection. Expecting to be able to hear that on the output.
+  * Ok. Plugged guitar into the reverb tank return. Able to hear it and control its volume level with the reverb mix potentiometer.
+
+* Test 3: Populate all tubes. Connect a speaker instead of the reverb tank. Expecting to hear the sound from the reverb circuit output.
+  * Ok. I hear audio coming out! It is not overly loud or overly distorted. But I hear it. Kind of tinny. But it is there.
+
+* Test 4: Connect the reverb tank. Expecting to have reverb effect work.
+  * Ok. I hear sweet reverb sounds. Nice!
+
+Mount the reverb tank. Put the amp back together.
+
+While putting the kids to bed. Have the thought. Hm. Maybe the T3 reverb drive transformer should be connected directly to V2, instead of following the 4.7K resistor, so it operates V9 at a slightly higher voltage. And then the R54 (4.7K screen resistor) should also go to V2.  Dammit. How come I didn't realize that before. Update the schematic. Take apart the amp. Move (1) small wire a little bit over on my reverb driver circuit board. Test it. Ok. yea. There is a lot more reverb now! That is better.  Put the amp back together again.
+
+Making small RCA patch cords to connect reverb tank to the amp chassis in the case. This is meaningful for me since I am using what is left of a RCA patch cord that I used to connect the Apple IIc computer to the television when I was a kid. I started to use it as shielded wire when working on guitars. So more personal history put into this amplifier.
+
+## 2020-08-18
+
+Digikey parts and NextGen Guitar tube sockets arrived today!
+
+Rough in the parts on the chassis for the reverb circuit.
+
+* Install V9 (EL84 in reverb circuit) tube socket.
+* Move the fuze over closer to the power switch. The back panel now has more room to put potentiometers.
+* Cut out a rectangle of sheet metal and screw it over the hole where one of the chassis can capacitors used to be.
+* Install the RCA jacks to connect amp to the reverb tank on this new sheet metal plate.
+* Mount J6 (reverb footswitch jack) into the hole where the power switch used to be.
+* Mount the 3 reverb control potentiometers into the (old fuze hole, a new hole, old ground switch hole)
+* Print label maker labels for the new knobs and connectors.
+* Dry fit a small circuit board on standoffs to be used for the discrete components.
+* Connect the driver transformer to the connector and to the tube socket.
+
 ## 2020-08-17
 
 * Install tube sockets for the 12AX7 and 12AT7 tubes for the reverb circuit onto the chasis. Wire up the fillaments.
 * The tremolo was "too fast". The slowest setting was about all I could use, but still too fast. Change C18 and C19 from 0.01uF to 0.02uF. It is a much usable range of speeds now.
 * Change C8 (input to phase splitter from tone stack) from 0.02uF to 0.047uF. I think its a bit more "bassier" now.
+* Experiment with a 500K pot instead of the fixed 100K resistor. Find the variability of the pot does not effect the sound as much. But having this value larger allows the sound to break up easier for sure. Change R8 from 100k to 220K.
+* Update schematic. R24 and R25 are actually 100K trim pots in series with the resistors, I put in to get exactly 84K and 100K values.
 
 Trying to reduce the oscillations I am getting when turning the gain knobs all the way up.
 
@@ -17,6 +62,7 @@ Trying to reduce the oscillations I am getting when turning the gain knobs all t
 
 I still get high pitch squeal when the gain knobs are turned most of the way up. Some kind of stray capacitance with my sloppy wires probably. But I think it is a bit better. It does not have that cut power and do a sort of hum effect, which was likely from very high frequency inaudible oscillations.
 Ill leave this for now. Practically I won't crank out the gain knobs anyway right.
+
 
 ## 2020-08-15
 
