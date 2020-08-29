@@ -1,6 +1,6 @@
 # Hacks and mods
 
-Some of this stuff is ideas. It is anywhere between a wishlist and a blog. See the [status](STATUS.md) file for the a blog kind of list of what was done.
+Some of this stuff is ideas. It is anywhere between a wishlist and a blog. See the [status](CHANGELOG.md) file for the a blog kind of list of what was done.
 
 ## Test Plan
 

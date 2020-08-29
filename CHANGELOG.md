@@ -2,9 +2,77 @@
 
 This is the documentation of the amp state.
 
+## 2020-08-28
+
+* Install female IEC power connector after the switch, so I can plug in my pedal board to the amp and have it controlled by the amp power switch. One less stupid cord on the floor now.
+* Remove the variable resistor I had in series with power tube screens. It was not doing anything.
+* Remove the variable resistors I had to the power tube grids to attempt to bias them. They do not do anything.
+* Remove the high voltage test points. Repurpose 2 of the jacks as sensors for the grid to the power tubes, so we can analyze the phase inverter output.
+* Try to put in 6L6GC tubes, instead of the 7027A ones that I had in there. Yep, they seem to work Ok. I am interested to see if the slightly lower power ratings of the 6L6GC help them to enter break up a bit easier.
+
+Maybe it was the cleaning up the wiring and the adjustment pots that did nothing, but it feels a bit less buzzy now again!
+
+Have the idea to try to build a solid state phase inverter using op-amp. This will require a +/- DC power supply. Have the idea I can use the small DC-DC converter I have with a bridge rectifier and filter cap to get this from one of the tube filament supplies.
+
+Assemble a small module board that is this op-amp DC power supply from tube filament. It seems to work as expected.
+Use a signal generator of 1kHz and 5Vpp I am able to see the output waveform using the Hantek USB oscilloscope, and it is indeed inverted phase and the same amplitude. Experimentally I am able to drive this up to the power supply rails. I find that a 25K pot is enough to make the 5V signal not quite clip. The Traynor YBA-300 schematic used a 100K pot. Then again that was likely line audio level. I will have to measure this again when I get it into the amplifier.
+
+Here I am using the OPA2134 op-amp. I believe it can provide enough current that I do not need to use a tube to buffer it to the power tubes. I guess we will need to try it to see. I added a 1K resistor in series with the outputs.
+
+Trying to measure the waveform from the existing phase inverter on the Hantek scope. I find when I use capacitors on the same breadboard as the test op amp, the parasitic coupling is enough I hear the 1kHz test signal in the amp. Neat. And because I am tapping into the power tubes, I can basically drive output out of the amp independently of the volume controls. Try a separate bradboard. I need to use capacitors on the end of the probes because the Hantek apparently does not have an AC coupling option. And the amplifier has a -40VDC bias on these connections from its phase splitter into the power tubes, so i need to use funky scale on the screen to see the scope trace.
+But having a hard time to see a good signal. I can see one half of the guitar signal, but not the other half. It is almost a flat trace. It might be the power tubes are loading it too much to see it?  Try pulling the power tubes and measuring again.
+Still only seeing the signal going into V5 (2nd power tube), not V4 (1st power tube). Check the wiring in the amp.
+Check the connection. Use a probe on the signal generator on pin 6 of V4 (output from phase inverter tube) and see the signal is getting to the pin5 of V4.
+Odd. It must be the tube is loading the circuit so I can't even measure a voltage change?
+I am having a hard time getting a good signal. But when I turn up the tremolo I can see two sine waves of different amplitude and not shifted 180 deggrees at all. This is consistent with what I hear with my hears, the terrible buzzing problem. I have no interest in trying to investigate or adjust this long tail pair circuit.
+I have a feeling some of the squealing and oscillations I am having are due to the stray capacitance and resistor networks in this tube phase inverter schematic.
+
+Try to connect my op amp phase inverter by wiring the output from the reverb to the input to the op amp circuit on breadboard. Then wire outputs to the plug connectors. Disconnect the pin 5's from the old phase inverter that was going to power tube.
+I don't like having wires coming out of the chassis, but this op amp circuit is still on a breadboard. And it is all audio level signals here.
+
+It works!. Getting distortion at high gain, but this is because of likely not having the feedback connected. Lets test connect the feedback resistor.
+It seems to be ok with feedback resistor in place. Doesn't not work anyway.
+Put the tremolo oscillator tube back in. Tremolo seems to work ok too. And not having the terrible background buzz. There is a tiny bit of course. but this is normal.
+
+I have nice sound. I can see the phase and inverter phase things happening on the scope when I connect to the output from the op-amp. The audio signal is perfetly out of phase and same amplitude. There is a bit of random buzzing noise. But I think this is just noise in my room and computer and lights and test equipment. The long unshielded wires that carry the audio signal are coming out of the amp. They probably work like antennas to pick this noise up.
+
+The only issue is now with just the op-amp phase inverter the amp feels "too quiet". Maybe we do need to have a tube buffer then?
+Since we are this far into it, lets try to repurpose the old phase inverter tube for a driver buffer tube.  Remove the phase inverter module board I had in there before. So I can always undo this later if I need to. Rewire the phase inverter tube socket to be a pair of triode preamp. I again borrowed the values from the Traynor YBA-300 schematic. Here I think the setup is for a gain of at least 50. So moderate gain.
+
+Discover the gain knob is not really useful or needed. I found through experimentation having it at 25K causes random oscillation effects. But keeping it around 18K at the most seems to be pretty stable and good enough volume. So replace the pot with a 18K resistor. I assembled the phase inverter module all with screw terminals as the reverb module. That is such a convenient and good idea. So i just stuff a resistor into the screw terminals that were to go to the pot.
+
+Mount the power supply board into the chassis. At first I had a short circuit on the DC+ output from the diode rectifier. This is because I put the parts too close to teh edge of the board, did not consider standoff space. And I dumbly put the positive voltage pin in the corner. I should have put the ground around the perimiter of the board. Always something to learn. I just removed the one standoff. The board will be fine with three. The power transformer is a beast. It kept putting out about 4V when it was loaded up from a shorted out rectifier diode. The diode bridge got pretty hot. But i heard it making crackle sound and smelled it before i left it on very long. I think it is going to be ok anyway.
+
+* Replace the 12AT7 in the phase inverter section for the ECC803S it was before. Now that I have the op-amp phase inverter I can benefit from having the slightly more gain in the output into the power tubes.
+
+Test the amplifier now. It is whisper quiet. That buzzing and clicking I had intermittantly when it was on the breadboard is now gone. I figured it was just the wires working like antenna to pick up noise from the room.
+
+This amplifier is now almost as quiet as my YBA-300 amplifier. And I have the same satisfaction I have when I fixed that amp. Really the phase inverter was likely problematic forever here. Replacing this is the biggest improvement to this amp so far.
+
+And now I have a good size DC power supply in this amp to power op-amps. I can tinker to add other op-amp based circuits. Like active EQ. Though I am running very low on space. Stuff is going to have to start coming out before we can put any more in.
+
+I am considering the work and changes for this amp to be complete for now. Though I am going to leave it apart this weekend, in case there is any tinkering ideas. Because lately every time I put it back together it is not even a day and I am ripping it apart again.
+
+## 2020-08-26
+
+* Try adding a 68K resistor in series between (output of reverb) and input to phase splitter. Trying to get rid of higher gain squeal problems. That seems to actually help a bit. But I just can't use the reverb tone knob at all. Might remove it later then.
+  * Having this resistor in seems to make the amp sound like there is a blanket over it. Not liking it. Remove it.
+* Try adding grid bias adjust resistors to inputs of V4 and V5, the [two bias adjustments configuration](https://www.apexmatching.com/why-should-i-match-my-tubes-technicians-explanation). This also will require us to put test plugs up on the HT wire. The things we do for science. Measure the resistance and then the voltage drop through the transformer to infer current.
+  * This seems to be bad for this amp. It runs the tubes about twice as hot (you can tell by the smell too). And the tremolo circuit seems to bust. Undo the ground connection on the new bias resistors, so they are still in there in series with the 220K resistors, but I don't think they are doing anything. I might remove these pots later then sometime.
+* Experiment with adding a 500K pot in the feedback loop from the output. It sounds a bit louder and crunchier when this resistor is larger. But I also like how nice it sounds when this value is low. I tried making the feedback small, 68K, and that even sounds good. So put it back to 82K and remove the pot. (R28 used to be 100K)
+* Try to remove the reverb tone knob. Nope. It squeals more. The oscillations are somehow controlled when I adjust the tone stack. So maybe the feedback needs to go earlier into the amp stages.
+* Experiment to add a 100K resistor in parallel with C38 (connecting to the reverb mix knob). It seems to help a bit. or do nothing. Which ever.
+
+So a couple things that did not make a difference. But I guess this is how we learn too.
+
+I hear when testing, it is possible to overdrive the reverb, and I am hearing a bit crunch from the reverb in clean tone. That is a neat effect.
+
+* Try to swap out the phase inverter (which was ECC803) to a 12AT7. Lower gain to the power tubes. Trying to see if this removes squaling problem. It does not. but it seems to still sound ok.
+
 ## 2020-08-22
 
 * Swap out the 12AX7 in V2 (tone stack buffers) for a 12AT7. I can't tell entirely if it is helping remove some of that squeal oscillations. But it doesn't not work and seems to sound ok. So going to try leaving it in there for a bit. I did have a JJ ECC83 tube in there before.
+* Swap out the Sovtek 12AX7 in V1 (preamp) for the JJ ECC83 I took out from V2. That seems to again improve the sound character and reduce the squaling.
 
 ## 2020-08-20
 

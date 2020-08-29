@@ -15,7 +15,7 @@ Notable changes:
 * The crunch stage now has its own separate cathode bypass resistor and capacitor.
 * There is an effects send/return jacks after the tone stack, before the input to the phase inverter.
 * Stock 2M pots for volume were changed to be 1M, mostly because this is all I could find. But also the old values seemed to do cause the amp to do oscillating or squealing when turned up.
-* added 1M grid stop resistor to be right before the input to the tube, instead of before the 68K resistors from the input jack.
+* Added 1M grid stop resistor to be right before the input to the tube, instead of before the 68K resistors from the input jack.
 
 ## Reverb
 
@@ -37,9 +37,17 @@ I really appreciate having reverb effect built into the amp now. It is so much b
 
 ![output](output.png)
 
-* Added a 100 ohm variable resistor before the screen resistors to have the weighting adjusted so that
+* Replaced the "long tail pair" tube based phase inverter with a solid state op-amp phase inverter.
+  * This required a +/-15V DC power supply. I achieved this using a small DC-DC converter and diode rectitifer attached to the filament supply.
 
-> I plan to add banana jacks to the chassis so I can insert a meter probe to measure resistor and voltage drops (to compute current) without needing to take apart the amp. These will be on the chassis beside this potentiometer and behind the power tubes.
+The op-amp phase inverter is a lot more precise than the long tail pair circuit.
+
+* The annoying buzz or background hum that was always there is now gone.
+* Fixed the squealing when gain knobs or tone knobs are up.
+
+> I was chasing several high frequency oscillations since adding the reverb circuit. Having the gain up a bit past mid point, or having the tone control for the reverb on would cause screeching or loud hum and buzzing. Like the phase inverter was not working properly from being loaded.
+> I have a feeling some of the noise is coming from stray capacitance from the terribly arranged and too long unshielded wires everywhere.  It is a side quest to make the wires as short as possible.
+> It would appear the op-amp phase inverter has helped a lot of these demonic problems now as well!
 
 ## Power Supply
 
@@ -48,3 +56,14 @@ I really appreciate having reverb effect built into the amp now. It is so much b
 * Removed the "death capacitor"
 * Now having the V1 voltage to the output transformer switched. Before it was not switched by the bypass switch.
 * I built a convenient custom circuit board, so these high voltage parts are safely tucked off to the side. This was among the first enhancements. The old turret board and chassis mounted capacitors had high voltage wires spread everywhere.
+* Added a new module to use the [Recom RS-0505D](https://www.digikey.com/product-detail/en/recom-power/RS-0515D/945-1543-5-ND/2321270) to provide the +/-15V DC for the op amp in the phase inverter, by using the filament supply.
+* Moved all the power entry chassis components to one corner. Before they were kind of sprawled over the back of the chassis.
+* Added an IEC outlet after the power switch. This will allow me to switch the power to my pedal board from the amp switch now.
+
+## Tremolo
+
+![tremolo](tremolo.png)
+
+This circuit has not changed much from the original. I replaced all the parts with new parts of the same value. Except for
+
+* Changed C18 and C19 from 0.01uF to 0.02uF. This has the effect of making the oscillator operate a bit slower. I found before it was entirely too fast to be usable.
