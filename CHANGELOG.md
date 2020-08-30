@@ -2,6 +2,23 @@
 
 This is the documentation of the amp state.
 
+## 2020-08-30
+
+Realize I did not put in cathode bypass capacitors to the tube gain stage following the op-amp phase inverter. I don't need these, but any bit more gain that is possible is a good thing I think.  Take apart the amp quickly and put them in and then put the amp back together.
+
+## 2020-08-29
+
+It felt like the reverb signal was still clipping too often. I hear crunchy or distorted sounds coming out when I want clean tone. I think it is the super overdriven reberb signal.
+Add a 0.02uF capacitor and a 4.7K resistor in series to the input to the 12AT7 of the reverb drive circuit.
+This seems to help it a bit.
+
+Take a look at the reverb tank input signal on the Hantek scope. Observer there is no clipping there under various level settings.
+
+I am now super excited about how this amplifier sounds.
+Words to describe it include articulate, superb clarity, excellent responsiveness. It is picking up nuances of my fingers or picking I have not heard before. So now I need to work on improving my playing abilities to make use of these new features.
+
+Put the amp back together into its case.
+
 ## 2020-08-28
 
 * Install female IEC power connector after the switch, so I can plug in my pedal board to the amp and have it controlled by the amp power switch. One less stupid cord on the floor now.
