@@ -2,6 +2,38 @@
 
 This is the documentation of the amp state.
 
+## 2020-09-06
+
+While trying to solve an unrelated problem with a bad patch cable I thought the problem was the bug with the missing resistor to ground. Take apart the amp and add an 820K resistor. So that spot on the reverb blend knob is like a fixed gain pot after the reverb recovery tube.
+
+I guess that is it for bugs for now.
+
+## 2020-09-05
+
+* Notice the volume output gets reduced a lot when I have the reverb mix towards the wet reverb signal. I suspect the 50k reverb tone control is attenuating the output from the 12AX7 that recovers the signal from the reverb tank too much. Also this tone knob does not seem to do anything to the tone, except cause undesired oscillations somtimes when it is all the way over. Try to replace the reverb tone stack with a single 1M pot to ground, like the output pot on the gain stages.
+* Taking it out all the way does help. But I find I can't turn it up all the way, I get distorted sound. From experimentation find that about 36K is a good resistor to use. This lets me completely remove the pot. That works. I only need dwell and mix.
+
+Happy. This fixed the duck in volume when the reverb was on all the way, and the random oscillations on high gain settings when reverb tone knob was in some not ideal position.
+
+Dammit. Just get it together and notice when the reverb blend is maximum it makes farting oscillations. I guess I need a resistance to ground coming out of the reverb recovery stage to drop the level a bit.  So a new bug to fix next time I take it apart.
+
+## 2020-09-04
+
+* Change the feedback resistor (R28 from 82K to 200K). Before it had helped things when this was lower. But now with the op-amp phase inverter I guess the feedback is different. I felt tha amp was not loud enough, or it lacked in detail and articulation a bit.  I first tried to add in a resonance control, make this a 1M pot. But I found that it does not really make a noticable change in sound. And that 150K is the lowest we can go before it starts to do oscillations at high gain settings.
+* Attempted to add a presence control to feedback path. But this caused high pitch oscillations. Undo.
+* Change phase inverter op amp feedback resistor (R69) to 20K. I don't know why I had 18K. I think I experimented to find this was about right setting on the gain knob. But I have 20K resisters everywhere else there right. So try it to see if it still works. It does.  This stage now has a gain of 20 instead of 18.
+
+Setting the feedback resistor seemed to help stop the squeal at high gain settings. I need to play more with the settings and see, but it does feel a lot better now.
+
+* Remove the S1 (clean / crunch switch) from the signal path. I basically like having two tube gain stages in series all the time. So I now have 2 volume knobs all the time as well.
+* Investigate using the crunch swith to engage some [clipping diodes](https://warpedmusician.wordpress.com/2014/01/23/adding-diodes-to-tube-amps/) after the first gain stage then. I tried them on their own and it was ok. But I don't like how it sounds with my usual guitar sound setup. It almost sounds like a fuzz pedal. Not my thing. Remove the diodes. Something to revisit some other time with something else. At least we tried.
+* Delete R62 and R63 (360K between output of  gain stage and volume pots ). This was attempt to stop that whacky oscillations at high gain settings.
+* Not entirely happy without that S1 (clean/crunch) switch to allow me to use one preamp stage like it originally was. Or both in series. I feel sometimes the single stage is warmer and has better bass response.  So. undo taking that out.
+
+Kind of a day where I try things and then undo them. I guess a small bit of tidy ups from previous hacking attempts.
+
+For now the amp is really good at clean channel sounds.
+
 ## 2020-08-30
 
 Realize I did not put in cathode bypass capacitors to the tube gain stage following the op-amp phase inverter. I don't need these, but any bit more gain that is possible is a good thing I think.  Take apart the amp quickly and put them in and then put the amp back together.
