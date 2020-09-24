@@ -2,6 +2,65 @@
 
 This is the documentation of the amp state.
 
+## 2020-09-23
+
+I was not really happy with the way the preamp sounds. The original preamp circuit as it was sounds ok. But the crunch mode I put in to feed the two stages together just does not sound good to me. When the gain is turned up it sounds harsh and shrill. And when I use it with the gain lower to get clean tone, I am able to get a bit of that nice "glassy" sound I like. But It also sounds very thin. This is likely because the way I have the first stage wired currently with the 1uF capacitor and 2.7K resistor to bypass the cathode, that Is most likely because it gets more gain after 1KHz.
+
+* Convert the J1, the "lo" input to be a direct connection to input of RV2 (2nd volume knob), that goes directly into V2A (the 12AT7 preamplifier before cathode follower for tone stack.). This will allow me to bypass the preamp circuit all together. RV2 is now a "master volume"
+* Wire in the RG-178 cable as the path from output of preamp, through J1, and into RV1. The idea is to have as much shielding from noise as possible in the early stage here. Since we kind of have a bit more signal path length here now.
+* Change C34 (cathode bypass cap on V2A for tone stack preamp) from 1uF to 270uF. This is now the same effect as what the first preamp stage used to be. Looking for more gain here, as well as a flatter frequency response.
+* Change C4 from 0.02uF,400V to 0.1uF,400V. Looking to have better passsing of all frequencies here.
+
+With this, we are able to completely de-populate V1 (preamp stages.) Completely remove the preamp module and V1 for now.
+
+Going to work on designing a good preamp circuit on a breadboard for a bit.
+
+I noticed before when using the amp, when I turn the reverb mix knob over all the way it causes amp buzzing, like power loss and oscillations.
+
+* Add 68K resistor between the pin 3 of RV7 (reverb mix) and the existing 36K resistor. - I guess I can just make this a 100K resistor. But interested in seeing if this fixes the problem...
+
+That seems to solve the oscillations.
+
+But I notice, when I have the mix knob over on all the way to dry amp, i hear buzzing sound. When I move it all the way wet reverb, i hear a different kind of hum sound.
+
+Disconnect the audio intput to the op-amp plase inverter. It is indeed super silent.
+
+Test jimpering the input from J1 now direct from guitar into the op-amp input. I hear pristine clear sound.
+
+So the part from the phase inverter through power stage is perfect.  The noise is coming some where in the tone stack, reverb.
+
+Connect the guitar into the effct return connector. This bypasses the tone stack and goes straight into the reverb section. Reconnect reverb output to the op-amp phase inverter. Ok. that also sounds really good.
+
+So the buzzy problem is coming from the tone stack?
+Replace the 12AT7 with a 12AX7. Ok. In this circuit this seems to work a lot better. No crazy loud hum / buzzing. I wonder if this 12AT7 tube went bad. Will test in my desk audio amp later..
+
+Though this showed me I have a lot less problems without the tone stack. Maybe I should work on replacing this with an op-amp driven EQ as well?
+We need V2 in there, that is the only preamp we have with the volume control there.
+
+What if we try to jumper pin 3 (output of cathode follower) of V2, to J9 (effect send). This keeps the valve preamp, but bypasses the tone stack.
+No, still hear the hum and buzz. And it still changes when moving the reverb mix knob.
+
+Notice the pin 6 and pin 2 are wired together, but go under the filament supply. Maybe this is just too close to this AC signal and it is picking up the hum from that? This was the original soldering of the socket, I had not changed it all this time.  Disconnect these two pins, wire a wire around them. Also remove the on-socket resistor. Make this be in a wire now. It was also the original 100K resistor. Replace this with a modern metal film resistor.
+
+Leave the 2nd half of V2 disconnected. Jumper a 0.1uf capacitor to pin 6, so it can be connected directly to J9 (output of the tone stack). This bypasses the tone stack all together.
+Still wretched hum.
+Try swapping V2 with a different tube. Same.
+Pull V2 out all together. Ah still lots of hum.
+Plug in the effects return. hum goes away. ok something is wrong here.
+Finish rewiring the other half of V2. Maybe the floating grid is causing some instabilities here.
+Ok, the hum seems to have gone a lot more away.
+If I turn the reverb mix all the way over, there is a very faint hum now. But this is likely the lack of quality of signal going to my reverb unit.
+But wow, way less hum than I had.  That fucking tube socket wiring was causing a bit of this hum the amp has always had!!.
+Any how, no more oscillating or squealing when reverb knobs are turned all ways.
+Put back the 12AT7 tube. It seems to work well here.
+Continue to add more RG-178 wire along the signal path, from the tone stack components, tube socket to the pots.
+
+At the moment there is entirely no preamp circuit. Guitar into the input works, but is not very loud, even on max volume. This is now like a 500mw bedroom amplifier.
+But, I can work on experimenting with preamp designs with the amp not ripped apart, and with the assumption that this amp as it is, is now a clean power amp. At least at lower volumes like i am testing now. That is the tonal character needs to come from the preamp.
+
+From the testing tonight it became clear how I could more effectively bypass the tone stack. By placing a 0.1uF capacitor onto pin 6 of V2 and adding a toggle switch after RV3, before J9 effects send. Go ahead and put that in. Use more RG-179 back to the capacitor on the tube socket.
+I don't always want to bypass the tone stack. But at least I can now if I do want to.
+
 ## 2020-09-06
 
 While trying to solve an unrelated problem with a bad patch cable I thought the problem was the bug with the missing resistor to ground. Take apart the amp and add an 820K resistor. So that spot on the reverb blend knob is like a fixed gain pot after the reverb recovery tube.
