@@ -2,6 +2,133 @@
 
 This is the documentation of the amp state.
 
+## 2020-09-26
+
+Wanting to try an EF86 as the preamp stage. Follow a design from various google.
+The thing is, I have 350V going in, so a 10k voltage dropper resistor, that is still 340 ish volts. Which is more than all these designs seem to say 250V.
+Probably 250V because that was mains power? The tube seems to be rated for 550V max. so I guess it i ok.
+It turns on and doesn't burn up right away. But it is late at night now so I can't evaluate it in all the settings without the attenuator. I swear this attenuator makes fake buzzing sounds on the speaker, so it sounds distorted when really it is not distorted.
+
+Having the ida to wire back the 12AX7 tube, with one element as the original traynor preamp circuit, and the second to be a cold clipper style setup, Where I have a larger cathode resistor. I put in a variable pot, tried it at 20k, 10K.  I am not really a fan of how it sounds. Set the resistance to 2K and will come back to this later.
+
+I put back in the clean / crunch switch, so that I can select between EF86 and 12AX7 preamps. There is a lot more brightness and clarity and gain on the EF86. The plate bypass cap I put on the 12AX7 also helps remove its brightness a bit too. But I am sure the EF86 has more sparkliness to it.
+
+Really happy to have a flexible preamp option.
+
+Put the amp back in its chassis and test it out.
+
+I really do not like the bypass the tone stack switch. I worry that it will cause a higher voltage to reach the op-amp phase inverter, and that will just damage it.
+There is not much good tonal gain by not having the tone stack either. It just gets louder. If I had an all tube path, ok, maybe that would be interesting. But I kind of threw out the tube phase inverter feeling the op-amp way is superior.
+
+Take apart the amp and remove that bypass the tone stack switch again. That hole on the bezel is cursed to never get filled I guess.
+
+Put the amp back together. It sound so silent on its own when no sound is coming out. No AC hum from the rectifier diodes bleeding out any more.
+Turning the knobs to all the modes. There is a little bit of background hum when I have reverb all the way over. But practically this doesn't sound good and I won't use that.
+
+Only bug I know about is if you turn it off it sort of chirps a couple times. BUt that is not a big deal problem I think.
+
+## 2020-09-25
+
+I have concerns, as I have seen the audio level output from my guitar to be a few volts.
+
+Set up a signal generator and test measure points in the circuit:
+
+* at TP14 V2 (output) of gain stage
+
+Right away I see a bit of 120Hz noise. About 200mv peaks. and the signal oscillates slowly up and down. to have apparent 40 hz.
+Ok, what is causing this noise?
+Test disconnect the boost converter, pull the op-amp, pull the phase inverter driver tube (amp was oscillating without the op-amp in there)
+
+Still see the noise. Ok, I will have to fix this.
+
+But it looks like when I have an input signal of sine wave, 10mV peak to peeak,
+Wait. the usb scope sias the ch2 is 34mvpp. i disagree. Time to get out the Tek scope. I have doubts for the accuracy of this usb hantek scope...
+
+Set up tek scope. When signal generator is set to 25mvPP, i measure 28mmPP. Ok. that is closer at least. Maybe this is very low on the sensitivity for my gear.
+
+Measure TP14 at different amplitudes. Notice I seem to have a gain about 30 with this stage. But not able to make it saturate. I went up to 13v on input, and this was creating 304V to output. Not wanting to burn out my scope, it is rated at 300V on inputs.
+
+Ok, moving on
+
+* at TP17 (output from cathode follower)
+
+I notice this seems to track same voltage, phase, amplitude as TP14. Not surprising I guess, this is what cathode follower is supposed to do.
+There is a DC bias of about 150V
+
+* at TP3 (input to cathode follower in reverb)
+
+I connected onto the treble tone knob pin 2 here.
+
+Was able to drive in up to 6v input before this caused the waveform to start to distort.
+
+* at TP25 (input to op-amp phase inverter)
+
+I notice this tracks up pretty high when reverb is off. When reverb is higher it is even higher, like into hundreds of volts. but it must be super high impedance, as the op-amp here loading the circuit, the resulting voltage is about 0.4v when the op-amp is installed.
+
+* at TP23 and TP24 (inputs to driver tube)
+* at TP29 and TP30 (inputs to 6L6GC)
+
+I will come back to this.
+
+While set up, I might as well attempt to do a frequency sweep. I have a good load box now, last time I tried this I just had a power resistor.
+
+
+Had an idea, the noise is likely coming from the power supply, and its poor filtering.
+Add a 10K resistor and a 10uF capacitor to the power into V2.
+This drops the voltage from 370V to 340V. So the V2 uses about 3mA. or 1.5mA per triode. Yep. That makes sense.
+
+There is now a lot less hum on the speaker. And when I use my scope to probe (after C37) I don't see that 120Hz ripple any more too!!.
+
+Yay for power supply filtering.
+
+## 2020-09-24
+
+Notice the signal wires from the input from the reverb tank to the preamp tube in the reverb circuit. That should also be a shielded wire. Which is also the wire to the chassis for the reverb switch. And finally the wire from the tone stack to the trebble knob.  I now have replaced a few feet of unshielded wire with this RG-178 for the sensitive high ipedance and low signal runs, where noise is likely to be picked up from.  And it seems to have helped. It is a lot less hum than it was before!
+
+Continued learning. Before when I put in the ECC803 as the driver following the op-amp phase inverter, I used
+
+* Rl=220K
+* Rk=1K
+* Ck=27uF
+
+So. Why these values?  Most likely because I saw some schematic, or used the tube gain calculator. But I did not consider voltages or currents here.  Lets measure stuff.
+
+* The voltage at the plates is 145V.
+* The voltage at the cathode is 1V.
+* For the 1K cathode bypass resistor, this is 1mA.
+* From the voltage drop from B+(370V) to 145V  (225V) over the 220K resistor, also 1mA
+
+Read the [ECC803S datasheet](https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc803s.pdf). That one is terrible. here [is another one](https://drtube.com/datasheets/ecc803s-jj2005.pdf)
+
+* Nominal voltage is 250V
+* A 100K resistor should give a voltage drop of 100V here, and then it should be around 245V.
+* Now measure 216V on the plate and 1.45V on the cathode. So about 1.5 mA idle now.
+* The max current for these 12AX7 tubes is about 6mA.
+* To drive the tube with 5mA, I would likely need a 30K resistor here instead of 100K (a resistor that takes the 370V B+ and drops to 250V, would need 5mA over that resistor).
+* I wish I understood how to interpret load line charts to see where we are operating.
+
+I [think](https://robrobinette.com/Drawing_Tube_Load_Lines.htm) having the slightly warmer bias here should help to improve the headroom, by having the operating point more in the middle of the linear ranges. I think having a slightly higher voltage at the plate should help to drive the output tubes a bit harder too.
+
+Investigate, powering the ECC803S from the same supply as what goes into the output transformer.
+
+* Measure this supply to be 400V.
+* Va=238V
+* Vc=1.58V
+* current is about 1.6mA now.
+I don't hear any difference in volume.
+
+Actually when I turn the amp out of standby there is an audible "electrical buz noise. Likely as tube is coming up to voltage it creates a few cycles of out of phase signal to the power tubes so we hear the hum.  But we do not hear this when this tube is powered by B+. So put it back for now.
+
+But good to know I can run this tube off the 400V going into the output transformer.
+
+Thinking outloud. The preamp stage will send an audio signal into the op-amp phase inverter. This currently has a gain of 20. The limit of the op-amp is 30Vpp.
+The max voltage out of the drive tube will be the gain of this driver stage over 30V.
+The 6L6GC tube has a max grid voltage of what the negative bias voltage is, because if it is greater than zero volts, it might enter instability? So this might be about 40V?
+
+But also of interest, the maximum audio frequency input to the phase inverter (output of the reverb stage then), is about 1.5Vpp. And if it is more than this, then we would start to clip at the op amp right. I wonder if this was happening before with the old preamp, where chaining the input stages might cause too much signal to get into the phase inverter.
+
+I guess now with the way it is wired i have the RV2 as the "master volume" to control what gets into the rest of the amp circuit.
+
 ## 2020-09-23
 
 I was not really happy with the way the preamp sounds. The original preamp circuit as it was sounds ok. But the crunch mode I put in to feed the two stages together just does not sound good to me. When the gain is turned up it sounds harsh and shrill. And when I use it with the gain lower to get clean tone, I am able to get a bit of that nice "glassy" sound I like. But It also sounds very thin. This is likely because the way I have the first stage wired currently with the 1uF capacitor and 2.7K resistor to bypass the cathode, that Is most likely because it gets more gain after 1KHz.
