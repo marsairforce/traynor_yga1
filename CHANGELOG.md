@@ -2,6 +2,52 @@
 
 This is the documentation of the amp state.
 
+## 2020-10-14
+
+* Remove the anode bypass capacitors from preamp tubes.  I felt it sounded too dark. It did not have that sparkly crispness I had come used to hearing.
+* Adjust RV9 to 2.6K
+
+## 2020-10-11
+
+* Change C20 (capacitor into cathode follow of reverb module) from 0.047uF to 0.1uF.
+* Change C44 (capacitor into phase inverter) from 0.047 to 0.1uF.
+* Change R1 (resistor into phase inverter) from 68K to 33K resistor.
+
+Hoping to allow more lower frequencies to pass through.
+
+* Change R1 and C44 into phase inverter to be switchable with dual SPDT toggle switch, to use the Hammond 107V audio transformer to couple the reverb stage to the op-amp phase inverter stage.
+
+Investigating how this sounds.
+
+It seems to make it sound a little bit louder. I hear a bit less low end, because the frequency response of this transformer is 300Hz bottom end. I sort of hear a bit of buzzy sound. This transformer is sensitive to magnetic interference from other transformers and AC signals in the chassis. Moving it and touching it changes the noise I get out of the amp.
+
+And the tremolo does not sound as nice. Oddly it cuts abruptly in and out. Like there is less drive or loading to the stage.
+
+Sometimes experimentation does not make a result we like.
+Roll back the attempt to try to switch the coupling capacitor to the phas inverter with a transformer.
+
+But leave the shielded wire section from the reverb out to the phase inverter in. Slowly converting all the signal path o shielded wires.
+Recycle some of the shielded wires I took out from tonight's experiment to the reverb dwell pot too.
+
+While on the tremolo, it is too fast for me still
+
+* Replace C17 from 0.02uF to 0.047uF. It is a bit slower now. Good.
+* Replace the otehr C18 and C19 with metal film caps. I am sure the ceramic ones worked ok. But they were super large and brittle, i broke one before moving things. And I think they are suceptable to temperature changes. I notice the temolo runs a bit faster when the amp is warm.
+
+Tremolo definitely sounds more useful to me now. A bit slower.
+
+* Investigate changing out R9 (anode resistor on V1A, cold clipper valve). Wanting to see if I can help reduce it's headroom a bit.
+* Experiment with setting RV9 (cathod clipper adjust) from 2K to 5K.
+* Add a 0.001uF capacitor to bypass R9 to try to take down the high frequency shrill a little bit., But now I am worried it sounds a bit too dark.
+
+I attempted to try to put the 107V transformer as the output stage of the 12AX7 tube on the reverb. It is too quiet. Of course, this is only 25K primary. I need ore power, or higher impedance to make this work properly. Oh. well. I was hoping the transformer would better filter out lower reverb frequencies.
+
+* Replace R20 and R21 (network out of reverb unit into reverb mix) with a 1M pot on the back. This lets me fine tune the level. I think this helps me find that spot to get better balance of volume of full reverb but without the small hum sound I was getting. Whatever. I had a hole there in the chassis anyway. And its less hacky than having the resistors and capacitor on the wire. Install another shielded cable. This one goes under the reverb circuit board. Good to get it in while I had it
+
+Put back in the 6l6GC tubes. Figure I don't run it loud enough to burn the nice 7027 ones. These are those Ruby tubes I pulled out of the Traynor YBA-300.
+
+Going to try to use amp for a bit to see if I like having that C41 in there on the cathode clipper tube plate.
+
 ## 2020-09-26
 
 Wanting to try an EF86 as the preamp stage. Follow a design from various google.
